@@ -18,7 +18,7 @@
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://raw.githubusercontent.com/epiccakeking/anaopsuserscript/master/themes/'+theme+'.css';
+        link.href = 'https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
         link.media = 'all';
         head.appendChild(link);
     }
