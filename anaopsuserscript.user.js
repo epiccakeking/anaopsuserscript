@@ -2,6 +2,8 @@
 // @name         AoPS Commands
 // @namespace    http://tampermonkey.net/
 // @version      1.3
+// @updateURL    https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
+// @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       You
 // @match        https://artofproblemsolving.com/*
@@ -33,18 +35,24 @@
         var comm=prompt("COMMAND");
         var cp=comm.split(" ");
         if (cp[0]=="jump"){
-            var x=window.location.href
-            x=x.split("_")[0]
-            if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
-                x=x.substring(0,x.lastIndexOf("p"))
-            }
-            window.location.href=x+"n"+cp[1]
+			try{
+				Number(cp[1])
+			}catch{
+				alert(cp[1]+" is not a number.")
+			}else{
+				var x=window.location.href
+				x=x.split("_")[0]
+				if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
+					x=x.substring(0,x.lastIndexOf("p"))
+				}
+				window.location.href=x+"n"+cp[1]
+			}
         }else if (cp[0]=="val"){
             localStorage.setItem(cp[1], cp[2]);
         }else if (cp[0]=="delval"){
             localStorage.removeItem(cp[1]);
         }else{
-            alert(cp[0]+"is not a command")
+            alert(cp[0]+" is not a command")
         }
     }
 })();
