@@ -16,12 +16,12 @@
     // Your code here...
     var theme=localStorage.getItem("theme")
     if (theme!=null){
-        var head  = document.getElementsByTagName('head')[0];
-        var link  = document.createElement('link');
-        link.rel  = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
-        link.media = 'all';
+        var head=document.getElementsByTagName('head')[0];
+        var link=document.createElement('link');
+        link.rel='stylesheet';
+        link.type='text/css';
+        link.href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
+        link.media='all';
         head.appendChild(link);
     }
     function KeyPress(e) {
@@ -34,13 +34,9 @@
         var comm=prompt("COMMAND");
         var cp=comm.split(" ");
         if (cp[0]=="jump"){
-			var x=-1
-			try{
-				x=Number(cp[1]);
-			}catch{
-				console.log("Not a number.")
-			}
-			if (x<1){
+            if (isNaN(x)){
+                alert("Not a number")
+            }else if (x<1){
 				alert('Invalid value for jump.')
 			}else{
 				var x=window.location.href
