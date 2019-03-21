@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.4
 // @updateURL    https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
@@ -35,11 +35,13 @@
         var comm=prompt("COMMAND");
         var cp=comm.split(" ");
         if (cp[0]=="jump"){
+			var x=null
 			try{
-				Number(cp[1])
+				x=Number(cp[1]);
 			}catch{
 				alert(cp[1]+" is not a number.")
-			}else{
+			}
+			if (x!=null){
 				var x=window.location.href
 				x=x.split("_")[0]
 				if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
