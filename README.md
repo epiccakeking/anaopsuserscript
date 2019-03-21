@@ -4,6 +4,7 @@ A userscript for artofproblemsolving.com
 Use CTRL+SHIFT+1 to open commands.
 
 Commands:<br>
-val: Set value in localstorage.
-delval: Delete value in localstorage.
-jump: Jump to post in topic.
+val: Set value in localStorage.<br>
+delval: Delete value in localstorage.<br>
+jump: Jump to post in topic.<br>
+theme: Changes theme. Equivalent to "val theme".
