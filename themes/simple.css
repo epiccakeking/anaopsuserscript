@@ -1,5 +1,8 @@
 .menubar-logo.online{
-    display: none !important;
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    height: 30px;
 }
 .menubar-links-outer{
     display: block !important;
@@ -24,6 +27,5 @@
     margin-top: 0px !important;
 }
 #small-footer-wrapper{
-    margin-top: 35px;
-    margin-bottom: -10px;
+    display: none !important;
 }
