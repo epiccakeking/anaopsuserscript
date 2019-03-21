@@ -35,13 +35,13 @@
         var comm=prompt("COMMAND");
         var cp=comm.split(" ");
         if (cp[0]=="jump"){
-			var x=null
+			var x=-1
 			try{
 				x=Number(cp[1]);
-			}catch{
-				alert(cp[1]+" is not a number.")
 			}
-			if (x!=null){
+			if (x<1){
+				alert('Invalid value for jump.')
+			}else{
 				var x=window.location.href
 				x=x.split("_")[0]
 				if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
