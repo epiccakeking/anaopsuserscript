@@ -28,7 +28,10 @@
                 x=x.substring(0,x.lastIndexOf("p"))
             }
             window.location.href=x+"n"+cp[1]
-            alert("Not implemented yet :(")
+        }else if (cp[0]=="val"){
+            localStorage.setItem(cp[1], cp[2]);
+        }else if (cp[0]=="delval"){
+            localStorage.removeItem(cp[1]);
         }else{
             alert(cp[0]+"is not a command")
         }
