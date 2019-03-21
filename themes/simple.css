@@ -16,6 +16,9 @@
     left: 0px !important;
     top: 5px !important;
 }
+.menubar-content{
+    height: 100% !important;
+}
 #header{
     height: 30px !important;
     margin-top: 0px !important;
