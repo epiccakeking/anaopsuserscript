@@ -1,27 +1,22 @@
-@-moz-document domain("artofproblemsolving.com"){
-	.menubar-logo.online{
-	  display: none !important;
-	}
-	.menubar-links-outer{
-	  display: block !important;
-	  width: 100% !important;
-	}
-	.menu-login-wrapper.online{
-	  position: absolute !important;
-	  right: 0px !important;
-	  top: 0px !important;
-	}
-	.menubar-labels.online{
-	  position: absolute !important;
-	  width: auto !important;
-	  left: 0px !important;
-	  top: 5px !important;
-	}
-	#header{
-	  height: 30px !important;
-	  margin-top: 0px !important;
-	}
-	#small-footer-wrapper{
-	  display: none !important;
-	}
+.menubar-logo.online{
+    display: none !important;
+}
+.menubar-links-outer{
+    display: block !important;
+    width: 100% !important;
+}
+.menu-login-wrapper.online{
+    position: absolute !important;
+    right: 0px !important;
+    top: 0px !important;
+}
+.menubar-labels.online{
+    position: absolute !important;
+    width: auto !important;
+    left: 0px !important;
+    top: 5px !important;
+}
+#header{
+height: 30px !important;
+margin-top: 0px !important;
 }
