@@ -14,16 +14,24 @@
     'use strict';
 
     // Your code here...
-    var theme=localStorage.getItem("theme")
-    if (theme!=null){
-        var head=document.getElementsByTagName('head')[0];
-        var link=document.createElement('link');
-        link.rel='stylesheet';
-        link.type='text/css';
-        link.href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
-        link.media='all';
-        head.appendChild(link);
+    function updateTheme(){
+        var theme=localStorage.getItem("theme")
+        if (document.getElementById("theme")==null){
+            if (theme!=null){
+                var head=document.getElementsByTagName('head')[0];
+                var link=document.createElement('link');
+                link.id="theme"
+                link.rel='stylesheet';
+                link.type='text/css';
+                link.href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
+                link.media='all';
+                head.appendChild(link);
+            }
+        }else{
+            document.getElementById("theme").href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
+        }
     }
+    updateTheme()
     function KeyPress(e) {
       var evtobj = window.event? event : e
       if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
@@ -51,6 +59,9 @@
 			}
         }else if (cp[0]=="val"){
             localStorage.setItem(cp[1], cp[2]);
+            if (cp[1]="theme"){
+                updateTheme()
+            }
         }else if (cp[0]=="delval"){
             localStorage.removeItem(cp[1]);
         }else{
