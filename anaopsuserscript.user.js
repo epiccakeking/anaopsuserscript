@@ -37,6 +37,8 @@
 			var x=-1
 			try{
 				x=Number(cp[1]);
+			}catch{
+				console.log("Not a number.")
 			}
 			if (x<1){
 				alert('Invalid value for jump.')
