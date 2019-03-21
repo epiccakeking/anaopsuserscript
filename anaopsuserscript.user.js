@@ -19,7 +19,7 @@
         link.id   = cssId;
         link.rel  = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'http://website.com/css/stylesheet.css';
+        link.href = 'https://raw.githubusercontent.com/epiccakeking/anaopsuserscript/master/themes/'+theme+'.css';
         link.media = 'all';
         head.appendChild(link);
     }
