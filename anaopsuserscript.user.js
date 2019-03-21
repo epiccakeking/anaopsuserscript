@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      1.3
 // @description  try to take over the world!
 // @author       You
 // @match        https://artofproblemsolving.com/*
 // @grant        none
+// @run-at document-start
 // ==/UserScript==
 
 (function() {
