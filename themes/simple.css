@@ -21,6 +21,6 @@
     margin-top: 0px !important;
 }
 #small-footer-wrapper{
-  position: absolute;
-  bottom: 0px !important;
+    margin-top: 35px;
+    margin-bottom: -10px;
 }
