@@ -1,8 +1,8 @@
 # anaopsuserscript
-A userscript for artofproblemsolving.com
-<a href="https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js">userscript install</a>
-Use CTRL+SHIFT+1 to open commands.
-
+A userscript for artofproblemsolving.com<br>
+<a href="https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js">install userscript</a><br>
+Use CTRL+SHIFT+1 to open commands.<br>
+<br>
 Commands:<br>
 val: Set value in localStorage.<br>
 delval: Delete value in localstorage.<br>
