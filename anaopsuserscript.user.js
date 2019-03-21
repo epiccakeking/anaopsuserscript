@@ -2,7 +2,6 @@
 // @name         AoPS Commands
 // @namespace    http://tampermonkey.net/
 // @version      1.4.1
-// @updateURL    https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       You
