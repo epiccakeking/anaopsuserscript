@@ -17,6 +17,10 @@
     top: 5px !important;
 }
 #header{
-height: 30px !important;
-margin-top: 0px !important;
+    height: 30px !important;
+    margin-top: 0px !important;
+}
+#small-footer-wrapper{
+  position: absolute;
+  bottom: 0px !important;
 }
