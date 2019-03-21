@@ -16,7 +16,6 @@
     if (theme!=null){
         var head  = document.getElementsByTagName('head')[0];
         var link  = document.createElement('link');
-        link.id   = cssId;
         link.rel  = 'stylesheet';
         link.type = 'text/css';
         link.href = 'https://raw.githubusercontent.com/epiccakeking/anaopsuserscript/master/themes/'+theme+'.css';
