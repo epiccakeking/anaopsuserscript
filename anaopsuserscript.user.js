@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    http://tampermonkey.net/
-// @version      1.4.1
+// @version      2
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
-// @author       You
+// @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
 // @grant        none
 // @run-at document-start
@@ -33,6 +33,9 @@
     function commandprompter(){
         var comm=prompt("COMMAND");
         var cp=comm.split(" ");
+        if (cp[0]=="theme"){
+            cp.unshift("val")
+        }
         if (cp[0]=="jump"){
             if (isNaN(x)){
                 alert("Not a number")
