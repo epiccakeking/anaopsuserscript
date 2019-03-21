@@ -12,6 +12,17 @@
     'use strict';
 
     // Your code here...
+    var theme=localStorage.getItem("theme")
+    if (theme!=null){
+        var head  = document.getElementsByTagName('head')[0];
+        var link  = document.createElement('link');
+        link.id   = cssId;
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'http://website.com/css/stylesheet.css';
+        link.media = 'all';
+        head.appendChild(link);
+    }
     function KeyPress(e) {
       var evtobj = window.event? event : e
       if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
