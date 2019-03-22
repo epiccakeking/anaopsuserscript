@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    http://tampermonkey.net/
-// @version      2
+// @version      2.1
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -47,9 +47,10 @@
             cp.unshift("val")
         }
         if (cp[0]=="jump"){
-            if (isNaN(x)){
+            var n=Number(cp[1]);
+            if (isNaN(n)){
                 alert("Not a number")
-            }else if (x<1){
+            }else if (n<1){
 				alert('Invalid value for jump.')
 			}else{
 				var x=window.location.href
