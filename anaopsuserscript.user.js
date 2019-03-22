@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    http://tampermonkey.net/
-// @version      2.1
+// @version      2.2
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -13,21 +13,32 @@
 (function() {
     'use strict';
     // Your code here...
+    function cthemeupdate(){
+        localStorage.setItem("ctheme",encodeURI(document.getElementById("cthemepopup").value));
+        updateTheme()
+    }
     function updateTheme(){
-        var theme=localStorage.getItem("theme")
-        if (document.getElementById("theme")==null){
-            if (theme!=null){
-                var head=document.getElementsByTagName('head')[0];
-                var link=document.createElement('link');
-                link.id="theme"
-                link.rel='stylesheet';
-                link.type='text/css';
-                link.href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
-                link.media='all';
-                head.appendChild(link);
+        var head=document.getElementsByTagName('head')[0];
+        var theme=localStorage.getItem("theme");
+        var ctheme=localStorage.getItem("ctheme");
+        if (theme!=null){
+            if (document.getElementById("theme")==null){
+                var elmnttheme=document.createElement('link');
+                elmnttheme.id="theme"
+                elmnttheme.rel='stylesheet';
+                elmnttheme.type='text/css';
+                elmnttheme.media='all';
+                head.appendChild(elmnttheme);
             }
-        }else{
             document.getElementById("theme").href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
+        }
+        if (ctheme!=null){
+            if (document.getElementById("ctheme")==null){
+                var elmntctheme=document.createElement('style');
+                elmntctheme.id="ctheme"
+                head.appendChild(elmntctheme);
+            }
+            document.getElementById("ctheme").innerHTML=decodeURI(ctheme);
         }
     }
     updateTheme()
@@ -48,6 +59,7 @@
     function commandprompter(){
         var comm=prompt("COMMAND");
         var cp=comm.split(" ");
+
         if (cp[0]=="theme"){
             cp.unshift("val")
         }
@@ -67,9 +79,20 @@
 			}
         }else if (cp[0]=="val"){
             localStorage.setItem(cp[1], cp[2]);
-            if (cp[1]="theme"){
+            if (cp[1]=="theme" || cp[1]=="ctheme"){
                 updateTheme()
             }
+        }else if (cp[0]=="ctheme"){
+            var cthemepopup=document.createElement('div');
+            var cthemetextarea=document.createElement('textarea');
+            cthemetextarea.id="cthemepopup";
+            var cthemebutton=document.createElement('button');
+            cthemebutton.type="button";
+            cthemebutton.innerHTML="Update";
+            cthemebutton.onclick=cthemeupdate
+            cthemepopup.appendChild(cthemetextarea);
+            cthemepopup.appendChild(cthemebutton);
+            alert(cthemepopup)
         }else if (cp[0]=="delval"){
             localStorage.removeItem(cp[1]);
         }else{
