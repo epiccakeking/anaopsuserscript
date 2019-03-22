@@ -7,4 +7,5 @@ Commands:<br>
 val: Set value in localStorage.<br>
 delval: Delete value in localstorage.<br>
 jump: Jump to post in topic.<br>
-theme: Changes theme. Equivalent to "val theme".
+theme: Changes theme. Equivalent to "val theme".<br>
+ctheme: Open the custom theme dialog.
