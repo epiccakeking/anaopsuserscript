@@ -18,3 +18,13 @@ input, .cmty-post-textarea{
 .cmty-post-username:not(*:not(.cmty-post-username)) > *{
     color: white !important;
 }
+
+*{
+    color: white !important;
+}
+.feed-tab{
+    color: gray !important;
+}
+.feed-subfeed-new-topic{
+  color: white !important;
+}
