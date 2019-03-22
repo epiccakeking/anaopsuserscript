@@ -32,12 +32,14 @@
         }
     }
     updateTheme()
-    function KeyPress(e) {
-      var evtobj = window.event? event : e
-      if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
-    }
-
-    document.onkeydown = KeyPress;
+    document.addEventListener('DOMContentLoaded', function() {
+        var commbtn=document.createElement('button');
+        commbtn.innerHTML="CMND";
+        commbtn.id="commline";
+        commbtn.style="position: fixed !important; bottom: 0px !important; left: 0px !important; !important; overflow: hidden !important; color: black !important; background-color: white !important; z-index: 100000000000000 !important; resize: none !important;"
+        commbtn.onclick=commandprompter;
+        document.body.appendChild(commbtn);
+    }, false);
     function commandprompter(){
         var comm=prompt("COMMAND");
         var cp=comm.split(" ");
