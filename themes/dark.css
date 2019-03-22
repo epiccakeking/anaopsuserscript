@@ -1,7 +1,7 @@
 *{
     background-color: black !important;
     border-color: darkgray !important;
-    color: white !important;
+    color: white;
 }
 .logo-img, .latex{
     background-color: white !important;
@@ -18,16 +18,9 @@ input, .cmty-post-textarea{
 .cmty-post-username:not(*:not(.cmty-post-username)) > *{
     color: white !important;
 }
-
-*{
-    color: white !important;
-}
 .feed-tab{
     color: gray !important;
 }
 .feed-subfeed-new-topic{
   color: white !important;
-}
-.topic-unread *{
-    background: #555 !important;
 }
