@@ -28,3 +28,6 @@ input, .cmty-post-textarea{
 .feed-subfeed-new-topic{
   color: white !important;
 }
+.topic-unread *{
+    background: #555 !important;
+}
