@@ -12,7 +12,6 @@
 
 (function() {
     'use strict';
-
     // Your code here...
     function updateTheme(){
         var theme=localStorage.getItem("theme")
@@ -32,6 +31,12 @@
         }
     }
     updateTheme()
+    function KeyPress(e) {
+      var evtobj = window.event? event : e
+      if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
+    }
+
+    document.onkeydown = KeyPress;
     document.addEventListener('DOMContentLoaded', function() {
         var commbtn=document.createElement('button');
         commbtn.innerHTML="CMND";
