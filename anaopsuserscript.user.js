@@ -43,8 +43,8 @@
     }
     updateTheme()
     function KeyPress(e) {
-      var evtobj = window.event? event : e
-      if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
+        var evtobj = window.event? event : e
+        if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
     }
 
     document.onkeydown = KeyPress;
@@ -59,24 +59,25 @@
     function commandprompter(){
         var comm=prompt("COMMAND");
         var cp=comm.split(" ");
-
         if (cp[0]=="theme"){
             cp.unshift("val")
         }
         if (cp[0]=="jump"){
+            var x=window.location.href;
+            x=x.split("_")[0];
             var n=Number(cp[1]);
-            if (isNaN(n)){
+            if (x.lastIndexOf("h")<10){
+                alert("Not viewing a topic.")
+            }else if (isNaN(n)){
                 alert("Not a number")
             }else if (n<1){
-				alert('Invalid value for jump.')
-			}else{
-				var x=window.location.href
-				x=x.split("_")[0]
-				if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
-					x=x.substring(0,x.lastIndexOf("p"))
-				}
-				window.location.href=x+"n"+cp[1]
-			}
+                alert('Invalid value for jump.')
+            }else{
+                if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
+                    x=x.substring(0,x.lastIndexOf("p"));
+                }
+                window.location.href=x+"n"+cp[1]
+            }
         }else if (cp[0]=="val"){
             localStorage.setItem(cp[1], cp[2]);
             if (cp[1]=="theme" || cp[1]=="ctheme"){
