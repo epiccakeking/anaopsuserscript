@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.3.1
+// @version      2.5
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -41,6 +41,21 @@
             document.getElementById("ctheme").innerHTML=decodeURI(ctheme);
         }
     }
+    function updateToggles(){
+        var styletogglesinner=""
+        if (localStorage.getItem('expandannouncements')=="true"){
+            styletogglesinner+=".cmty-topic-cell{height: 113px !important;}"
+        }
+        if (document.getElementById("theme")==null){
+            var styletoggles=document.createElement("style");
+            styletoggles.id="mystyletoggles";
+            styletoggles.innerHTML=styletogglesinner;
+            document.getElementsByTagName('head')[0].appendChild(styletoggles);
+        }else{
+            document.getElementById("mystyletoggles").innerHTML=styletogglesinner;
+        }
+    }
+    updateToggles()
     updateTheme()
     function KeyPress(e) {
         var evtobj = window.event? event : e
@@ -83,6 +98,7 @@
             if (cp[1]=="theme" || cp[1]=="ctheme"){
                 updateTheme()
             }
+            updateToggles()
         }else if (cp[0]=="ctheme"){
             var cthemepopup=document.createElement('div');
             var cthemetextarea=document.createElement('textarea');
@@ -96,6 +112,25 @@
             alert(cthemepopup)
         }else if (cp[0]=="delval"){
             localStorage.removeItem(cp[1]);
+            updateToggles()
+        }else if (cp[0]=="purge"){
+            var purgenum=Number(cp[1]);
+            if (isNaN(purgenum)){
+                alert("Not a number")
+            }else if (n<1){
+                alert('Invalid value for jump.')
+            }else{
+                if (confirm("Confirm purge?")){
+                    for (let i = 0; i < n; i++) {
+                        setTimeout(function timer() {
+                            document.getElementsByClassName('cmty-post-delete')[document.getElementsByClassName('cmty-post-delete').length-1].click();
+                            document.getElementsByClassName("btn-primary")[0].click();
+                        }, i * 1000);
+                    }
+                }else{
+                    alert("Purge cancelled.")
+                }
+            }
         }else{
             alert(cp[0]+" is not a command")
         }
