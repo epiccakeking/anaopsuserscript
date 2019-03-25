@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.6.1
+// @version      2.6.2
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -58,8 +58,8 @@
             document.getElementById("mystyletoggles").innerHTML=styletogglesinner;
         }
     }
-    updateToggles()
     updateTheme()
+    updateToggles()
     function KeyPress(e) {
         var evtobj = window.event? event : e
         if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
@@ -123,19 +123,24 @@
             }else if (n<1){
                 alert('Invalid value for jump.')
             }else{
-                if (confirm("Confirm purge?")){
-                    for (let i = 0; i < n; i++) {
-                        setTimeout(function timer() {
-                            document.getElementsByClassName('cmty-post-delete')[document.getElementsByClassName('cmty-post-delete').length-1].click();
-                            document.getElementsByClassName("btn-primary")[0].click();
-                        }, i * 1000);
-                    }
+                if (confirm("Confirm purge?")==true){
+                    purge(n)
                 }else{
                     alert("Purge cancelled.")
                 }
             }
         }else{
             alert(cp[0]+" is not a command")
+        }
+    }
+    function purge(n){
+        for (let i = 0; i < n; i++) {
+            setTimeout(function timer() {
+                var a = document.getElementsByClassName('cmty-post-delete')
+                a[a.length-1].click();
+                var b = document.getElementsByClassName("btn-primary")[0]
+                b.click();
+            }, i * 1000);
         }
     }
 })();
