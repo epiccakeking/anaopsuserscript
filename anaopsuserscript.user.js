@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.6.2
+// @version      2.6.3
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -75,7 +75,8 @@
         document.body.appendChild(commbtn);
     }, false);
     function commandprompter(){
-        var comm=prompt("COMMAND");
+        var comm="";
+        comm=prompt("COMMAND");
         var cp=comm.split(" ");
         if (cp[0]=="theme"){
             cp.unshift("val")
