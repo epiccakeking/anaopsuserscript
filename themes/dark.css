@@ -1,6 +1,3 @@
-#body {
-    background: url(http://i.imgur.com/uJm0XYY.png) !important
-}
 .aops-admin {
     color: red!important
 }
@@ -15,7 +12,7 @@
 }
 
 .community #subheader {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 #community-all.cmty-page-topic #cmty-topic-view-top .cmty-flat-top,#community-all.cmty-page-topic-list #cmty-topic-view-top .cmty-flat-top {
@@ -41,7 +38,7 @@
 .cmty-page-title {
     font-size: 24px;
     font-weight: 700;
-    color: steelblue
+    color: steelblue !important
 }
 
 .cmty-page-text {
@@ -179,7 +176,7 @@
 }
 
 .cmty-folder-top .cmty-cat-cell-cat-info:hover {
-    color: steelblue
+    color: steelblue !important
 }
 
 .cmty-folder-top .cmty-cat-cell-aops-font-icon:hover {
@@ -187,7 +184,7 @@
 }
 
 .cmty-add-new-category .cmty-cat-cell-aops-font-icon:hover {
-    color: steelblue
+    color: steelblue !important
 }
 
 .cmty-category-cell-bottom {
@@ -673,7 +670,7 @@
 .cmty-folder-top .cmty-small-category-heading.cmty-category-cell-heading,.cmty-view-folder-top .cmty-small-category-heading.cmty-category-cell-heading {
     box-shadow: none;
     height: 30px;
-    color: steelblue;
+    color: steelblue !important;
     font-size: 28px;
     background-color: #3a3a3a
 }
@@ -690,7 +687,7 @@
 }
 
 .cmty-folder-top .cmty-small-category-heading.cmty-category-cell-heading a,.cmty-view-folder-top .cmty-small-category-heading.cmty-category-cell-heading a {
-    color: steelblue
+    color: steelblue !important
 }
 
 .cmty-folder-top .cmty-small-category-heading .cmty-category-cell-title:before,.cmty-view-folder-top .cmty-small-category-heading .cmty-category-cell-title:before {
@@ -708,7 +705,7 @@
 .cmty-category-cell-folder .cmty-category-cell-heading {
     box-shadow: none;
     padding-left: 0;
-    border-top: 5px solid steelblue!important;
+    border-top: 5px solid steelblue !important!important;
     color: #3a3a3a
 }
 
@@ -781,7 +778,7 @@
 }
 
 .cmty-category-cell-folder .cmty-category-cell-title {
-    color: steelblue;
+    color: steelblue !important;
     height: 27px;
     padding: 3px 12px 0 2px;
     line-height: 23px
@@ -917,7 +914,7 @@
 
 .cmty-master-heading {
     text-align: left;
-    color: steelblue;
+    color: steelblue !important;
     font-weight: 700;
     font-size: 22px;
     padding-left: 20px
@@ -981,7 +978,7 @@ a.cmty-featured-content {
 
 .cmty-help {
     display: inline-block;
-    background-color: steelblue;
+    background-color: steelblue !important;
     border-radius: 10px;
     position: relative;
     bottom: 2px;
@@ -998,7 +995,7 @@ a.cmty-featured-content {
 }
 
 .cmty-folder-inline {
-    color: steelblue;
+    color: steelblue !important;
     font-family: AoPS
 }
 
@@ -1806,7 +1803,7 @@ a.cmty-featured-content {
     position: relative;
     font-size: 22px;
     font-weight: 700;
-    color: steelblue;
+    color: steelblue !important;
     padding-top: 14px;
     width: 105px;
     vertical-align: top;
@@ -1814,14 +1811,14 @@ a.cmty-featured-content {
 }
 
 .cmty-my-aops-top-heading a {
-    color: steelblue
+    color: steelblue !important
 }
 
 .cmty-my-aops-top-divider {
     position: relative;
     height: 40px;
     width: 2px;
-    background-color: steelblue;
+    background-color: steelblue !important;
     margin: 2px 8px
 }
 
@@ -1924,15 +1921,15 @@ a.cmty-my-books-link {
 }
 
 .cmty-page-my-profile .cmty-my-aops-profile-btn {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-bookmarks .cmty-my-aops-bookmarks-btn {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-messages .cmty-my-aops-messages-btn {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-my-aops-navigation .cmty-messages-btn-unread {
@@ -1947,39 +1944,39 @@ a.cmty-my-books-link {
 }
 
 .cmty-page-my-forums .cmty-my-aops-my-forums-btn {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-collections .cmty-my-aops-my-collections-btn {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-blogs .cmty-my-aops-my-blogs-btn {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-profile .cmty-my-aops-profile-btn:hover {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-bookmarks .cmty-my-aops-bookmarks-btn:hover {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-messages .cmty-my-aops-messages-btn:hover {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-forums .cmty-my-aops-my-forums-btn:hover {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-collections .cmty-my-aops-my-collections-btn:hover {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-blogs .cmty-my-aops-my-blogs-btn:hover {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-page-my-aops .cmty-folder-top {
@@ -2117,7 +2114,7 @@ a.cmty-my-books-link {
 
 .cmty-user-profile-heading {
     height: 30px;
-    color: steelblue;
+    color: steelblue !important;
     font-size: 22px;
     padding-left: 10px;
     line-height: 25px;
@@ -2167,7 +2164,7 @@ a.cmty-my-books-link {
 
 .cmty-user-profile-data-row .cmty-user-online {
     font-weight: 700;
-    color: steelblue
+    color: steelblue !important
 }
 
 @media (max-width: 930px) {
@@ -2274,7 +2271,7 @@ a.cmty-my-books-link {
 }
 
 .cmty-index-card-heading {
-    color: steelblue;
+    color: steelblue !important;
     height: 28px;
     line-height: 23px;
     font-size: 18px;
@@ -2439,7 +2436,7 @@ a.cmty-my-books-link {
 }
 
 .cmty-friends-heading {
-    color: steelblue;
+    color: steelblue !important;
     font-weight: 700;
     font-size: 14px
 }
@@ -3007,7 +3004,7 @@ a.cmty-my-books-link {
 }
 
 .cmty-cat-admin-help:hover {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-cat-admin-helper-modal.aops-modal-standard .aops-modal-body {
@@ -3133,7 +3130,7 @@ a.cmty-my-books-link {
 }
 
 .cmty-cat-admin-edit-title {
-    color: steelblue;
+    color: steelblue !important;
     height: 27px;
     padding: 3px 12px 0 2px;
     line-height: 23px;
@@ -3179,13 +3176,13 @@ a.cmty-my-books-link {
 }
 
 .cat-admin-tab.active-tab {
-    background-color: steelblue;
+    background-color: steelblue !important;
     color: #696B6F
 }
 
 .cmty-cat-admin-available-item-list {
     display: none;
-    border: 2px solid steelblue
+    border: 2px solid steelblue !important
 }
 
 .cmty-cat-admin-content-items {
@@ -3218,7 +3215,7 @@ a.cmty-my-books-link {
 .cmty-edit-bookmark {
     display: inline-block;
     padding: 2px 6px 0 6px;
-    color: steelblue;
+    color: steelblue !important;
     font-size: 20px
 }
 
@@ -3356,7 +3353,7 @@ a.cmty-my-books-link {
 }
 
 .cmty-blog-cell-entry-count {
-    color: steelblue;
+    color: steelblue !important;
     font-size: 12px
 }
 
@@ -3798,7 +3795,7 @@ ui.datepicker ui.datepicker-title select {
 }
 
 .cmty-tag-info-tag .cmty-item-tag,.cmty-tag-map-page .cmty-item-tag,.cmty-term-cell .cmty-item-tag {
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-term-fetch .ui-state-focus {
@@ -3876,7 +3873,7 @@ ui.datepicker ui.datepicker-title select {
 }
 
 .cmty-overall-title {
-    color: steelblue;
+    color: steelblue !important;
     font-size: 22px;
     padding-left: 10px;
     line-height: 25px;
@@ -3884,7 +3881,7 @@ ui.datepicker ui.datepicker-title select {
 }
 
 .cmty-memberlist-subtitle {
-    color: steelblue;
+    color: steelblue !important;
     font-size: 18px;
     font-weight: 700
 }
@@ -3911,7 +3908,7 @@ ui.datepicker ui.datepicker-title select {
 
 .cmty-user-search-row>div {
     display: inline-block;
-    color: steelblue;
+    color: steelblue !important;
     font-weight: 700;
     width: 80px;
     margin-right: 6px
@@ -3937,12 +3934,12 @@ ui.datepicker ui.datepicker-title select {
 
 .cmty-memberlist th.clickable:hover {
     background-color: #dae7f6;
-    color: steelblue
+    color: steelblue !important
 }
 
 .cmty-memberlist thead {
     color: #696B6F;
-    background-color: steelblue
+    background-color: steelblue !important
 }
 
 .cmty-memberlist tbody {
