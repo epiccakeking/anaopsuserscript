@@ -1,5 +1,9 @@
 body {
-    background: url(http://i.imgur.com/uJm0XYY.png) !important
+    background: url(http://i.imgur.com/uJm0XYY.png) !important;
+
+}
+.community-background-color {
+    background-color: steelblue !important;
 }
 .aops-admin {
     color: red!important
