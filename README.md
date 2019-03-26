@@ -12,4 +12,8 @@ ctheme: Open the custom theme dialog.<br>
 <br>
 Values:<br>
 expandannouncements: All threads display in expanded form, allowing viewing watchers and seeing more of announcements.<br>
-advancedfeed: Toggle on an option that might be useful for mobile users that use the feed a lot.
+advancedfeed: Toggle on an option that might be useful for mobile users that use the feed a lot.<br>
+<br>
+Credits:<br>
+happycupcake/epiccakeking: Main userscript<br>
+casi/casithepython: Dark theme
