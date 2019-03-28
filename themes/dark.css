@@ -2,6 +2,9 @@ body {
     background: url(http://i.imgur.com/uJm0XYY.png) !important;
 
 }
+.aops-scroll-outer {
+    background-color: #696B6F !important
+}
 .community-background-color {
     background-color: steelblue !important;
 }
