@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.6.3
+// @version      2.7.0
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -121,27 +121,24 @@
             var purgenum=Number(cp[1]);
             if (isNaN(purgenum)){
                 alert("Not a number")
-            }else if (n<1){
-                alert('Invalid value for jump.')
+            }else if (purgenum<1){
+                alert('Invalid value for purge.')
             }else{
                 if (confirm("Confirm purge?")==true){
-                    purge(n)
+                    for (let i = 0; i < purgenum; i++) {
+                        setTimeout(function(){
+                            var a = document.getElementsByClassName('cmty-post-delete')
+                            a[a.length-1].click();
+                            var b = document.getElementsByClassName("btn-primary")[0]
+                            b.click();
+                        }, i * 100);
+                    }
                 }else{
                     alert("Purge cancelled.")
                 }
             }
         }else{
             alert(cp[0]+" is not a command")
-        }
-    }
-    function purge(n){
-        for (let i = 0; i < n; i++) {
-            setTimeout(function timer() {
-                var a = document.getElementsByClassName('cmty-post-delete')
-                a[a.length-1].click();
-                var b = document.getElementsByClassName("btn-primary")[0]
-                b.click();
-            }, i * 1000);
         }
     }
 })();
