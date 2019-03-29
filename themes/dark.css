@@ -1,7 +1,14 @@
 .aops-scroll-inner {
     background-color: white;
 }
-
+.cmty-category-cell {
+    background-color: black !important;
+}
+.cmty-category-cell-bottom {
+    width: 100%;
+    background-color: black;
+    position: relative
+}
 body {
     background: url(http://i.imgur.com/uJm0XYY.png) !important;
 
@@ -199,12 +206,6 @@ body {
 
 .cmty-add-new-category .cmty-cat-cell-aops-font-icon:hover {
     color: steelblue !important
-}
-
-.cmty-category-cell-bottom {
-    width: 100%;
-    background-color: #696B6F;
-    position: relative
 }
 
 .cmty-page-topic .cmty-category-cell-bottom {
