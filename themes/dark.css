@@ -6,7 +6,7 @@
 }
 .cmty-category-cell-bottom {
     width: 100%;
-    background-color: black;
+    background-color: black !important;
     position: relative
 }
 body {
