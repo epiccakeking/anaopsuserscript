@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.7.0
+// @version      2.7.1
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -79,28 +79,28 @@
         comm=prompt("COMMAND");
         var cp=comm.split(" ");
         if (cp[0]=="theme"){
-            cp.unshift("val")
+            cp.unshift("val");
         }
         if (cp[0]=="jump"){
             var x=window.location.href;
             x=x.split("_")[0];
             var n=Number(cp[1]);
             if (x.lastIndexOf("h")<10){
-                alert("Not viewing a topic.")
+                alert("Not viewing a topic.");
             }else if (isNaN(n)){
-                alert("Not a number")
+                alert("Not a number");
             }else if (n<1){
-                alert('Invalid value for jump.')
+                alert('Invalid value for jump.');
             }else{
                 if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
                     x=x.substring(0,x.lastIndexOf("p"));
                 }
-                window.location.href=x+"n"+cp[1]
+                window.location.href=x+"n"+cp[1];
             }
         }else if (cp[0]=="val"){
             localStorage.setItem(cp[1], cp[2]);
             if (cp[1]=="theme" || cp[1]=="ctheme"){
-                updateTheme()
+                updateTheme();
             }
             updateToggles()
         }else if (cp[0]=="ctheme"){
@@ -120,25 +120,25 @@
         }else if (cp[0]=="purge"){
             var purgenum=Number(cp[1]);
             if (isNaN(purgenum)){
-                alert("Not a number")
+                alert("Not a number");
             }else if (purgenum<1){
-                alert('Invalid value for purge.')
+                alert('Invalid value for purge.');
             }else{
                 if (confirm("Confirm purge?")==true){
                     for (let i = 0; i < purgenum; i++) {
                         setTimeout(function(){
-                            var a = document.getElementsByClassName('cmty-post-delete')
+                            var a = document.getElementsByClassName('cmty-post-delete');
                             a[a.length-1].click();
-                            var b = document.getElementsByClassName("btn-primary")[0]
+                            var b = document.getElementsByClassName("btn-primary")[0];
                             b.click();
                         }, i * 100);
                     }
                 }else{
-                    alert("Purge cancelled.")
+                    alert("Purge cancelled.");
                 }
             }
         }else{
-            alert(cp[0]+" is not a command")
+            alert(cp[0]+" is not a command");
         }
     }
 })();
