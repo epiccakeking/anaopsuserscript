@@ -1,11 +1,10 @@
-.cmty-topic-cell{
+.cmty-topic-cell, #header, #header *:not(.logo-img), #page-wrapper, .cmty-topic-watchers{
     background-color: black !important;
     border-color: darkgray !important;
     color: white !important;
 }
 .logo-img, .latex{
     background-color: white !important;
-    background: white !important;
     filter: invert(1) !important;
 }
 .menu-cart-items{
@@ -26,6 +25,10 @@ input, .cmty-post-textarea{
     color: gray !important;
 }
 .feed-subfeed-new-topic{
+  color: white !important;
+}
+.feed-subfeed-button-selected{
+  background: gray !important;
   color: white !important;
 }
 .topic-unread{
