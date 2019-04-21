@@ -1,7 +1,15 @@
-.cmty-topic-cell, #header, #header *:not(.logo-img), #page-wrapper, .cmty-topic-watchers, .cmty-tag-filter > *, .cmty-category-itembox-wrapper .aops-scroll-outer{
+.cmty-topic-cell,
+#header,
+#header *:not(.logo-img),
+#page-wrapper,
+.cmty-topic-watchers,
+.cmty-tag-filter > *,
+.cmty-category-itembox-wrapper
+.aops-scroll-outer,
+.cmty-post-wrapper{
   background-color: black !important;
   border-color: darkgray !important;
-  color: white !important;
+  color: white;
 }
 .aops-scroll-fade-bottom, .aops-scroll-fade-top{
     background: black !important;
