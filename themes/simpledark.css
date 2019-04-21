@@ -14,6 +14,8 @@
 .cmty-topic-mini-reply,
 .bbcode_quote,
 .cmty-hide-content,
+.cmty-category-cell-bottom,
+.header-box .round-dropdown, .header-box .round-dropdown .cmty-main-crumb-search,
 #community-all > * > *{
   background-color: black !important;
   border-color: darkgray !important;
