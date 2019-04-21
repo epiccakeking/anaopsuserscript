@@ -6,7 +6,9 @@
 .cmty-tag-filter > *,
 .cmty-category-itembox-wrapper
 .aops-scroll-outer,
-.cmty-post-wrapper{
+.cmty-post-wrapper,
+.cmty-post-textarea,
+.cmty-post-preview{
   background-color: black !important;
   border-color: darkgray !important;
   color: white;
