@@ -1,3 +1,4 @@
+/*Styles most things that just need this*/
 .cmty-topic-cell,
 #header,
 #header *:not(.logo-img),
@@ -12,6 +13,10 @@
   background-color: black !important;
   border-color: darkgray !important;
   color: white;
+}
+/*Some other stuff*/
+#breadcrumbs-wrapper{
+    background-color: #004d53 !important;
 }
 .aops-scroll-fade-bottom, .aops-scroll-fade-top{
     background: black !important;
@@ -49,4 +54,3 @@ input, .cmty-post-textarea{
 .topic-unread .cmty-topic-cell-post{
     color: white !important;
 }
-
