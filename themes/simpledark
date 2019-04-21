@@ -1,0 +1,33 @@
+.cmty-topic-cell{
+    background-color: black !important;
+    border-color: darkgray !important;
+    color: white !important;
+}
+.logo-img, .latex{
+    background-color: white !important;
+    background: white !important;
+    filter: invert(1) !important;
+}
+.menu-cart-items{
+    background-color: white !important;
+    color: black !important;
+}
+input, .cmty-post-textarea{
+    color: white !important;
+}
+.cmty-post-username:not(*:not(.cmty-post-username)) > *{
+    color: white !important;
+}
+
+*{
+    color: white !important;
+}
+.feed-tab{
+    color: gray !important;
+}
+.feed-subfeed-new-topic{
+  color: white !important;
+}
+.topic-unread{
+    background: #555 !important;
+}
