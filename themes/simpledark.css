@@ -11,8 +11,7 @@
 .cmty-post-textarea,
 .cmty-post-preview,
 .cmty-index-card,
-.bbcode_quote,
-.cmty-hide-content,
+.cmty-topic-mini-reply,
 #community-all > * > *{
   background-color: black !important;
   border-color: darkgray !important;
