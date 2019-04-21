@@ -8,7 +8,8 @@
 .cmty-category-itembox-wrapper
 .aops-scroll-outer,
 .cmty-post-wrapper,
-.cmty-post-textarea,
+textarea, input,
+.cmty-items-input-box,
 .cmty-post-preview,
 .cmty-index-card,
 #community-all > * > *{
