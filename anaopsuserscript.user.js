@@ -21,7 +21,7 @@
         var head=document.getElementsByTagName('head')[0];
         var theme=localStorage.getItem("theme");
         var ctheme=localStorage.getItem("ctheme");
-        if (theme!=null){
+        if (theme!=null && theme!="none"){
             if (document.getElementById("theme")==null){
                 var elmnttheme=document.createElement('link');
                 elmnttheme.id="theme"
