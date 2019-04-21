@@ -12,6 +12,8 @@
 .cmty-post-preview,
 .cmty-index-card,
 .cmty-topic-mini-reply,
+.bbcode_quote,
+.cmty-hide-content,
 #community-all > * > *{
   background-color: black !important;
   border-color: darkgray !important;
