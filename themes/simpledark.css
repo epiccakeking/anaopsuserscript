@@ -11,10 +11,9 @@
 .cmty-post-textarea,
 .cmty-post-preview,
 .cmty-index-card,
-textarea, input,
-.cmty-items-input-box,
-#community-all > * > *,
-.cmty-category-cell-bottom {
+.bbcode_quote,
+.cmty-hide-content,
+#community-all > * > *{
   background-color: black !important;
   border-color: darkgray !important;
   color: white;
@@ -58,7 +57,4 @@ input, .cmty-post-textarea{
 }
 .topic-unread .cmty-topic-cell-post{
     color: white !important;
-}
-.triangle{
-    display: none !important;
 }
