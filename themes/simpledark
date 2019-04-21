@@ -1,7 +1,10 @@
-.cmty-topic-cell, #header, #header *:not(.logo-img), #page-wrapper, .cmty-topic-watchers{
-    background-color: black !important;
-    border-color: darkgray !important;
-    color: white !important;
+.cmty-topic-cell, #header, #header *:not(.logo-img), #page-wrapper, .cmty-topic-watchers, .cmty-tag-filter > *, .cmty-category-itembox-wrapper .aops-scroll-outer{
+  background-color: black !important;
+  border-color: darkgray !important;
+  color: white !important;
+}
+.aops-scroll-fade-bottom, .aops-scroll-fade-top{
+    background: black !important;
 }
 .logo-img, .latex{
     background-color: white !important;
@@ -17,10 +20,6 @@ input, .cmty-post-textarea{
 .cmty-post-username:not(*:not(.cmty-post-username)) > *{
     color: white !important;
 }
-
-*{
-    color: white !important;
-}
 .feed-tab{
     color: gray !important;
 }
@@ -33,4 +32,7 @@ input, .cmty-post-textarea{
 }
 .topic-unread{
     background: #555 !important;
+}
+.cmty-topic-cell-post{
+    color: white;
 }
