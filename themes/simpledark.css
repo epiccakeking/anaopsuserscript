@@ -65,3 +65,6 @@ input, .cmty-post-textarea{
 .triangle{
     display: none !important;
 }
+.cmty-post-username:not(.cmty-forum-mod):not(.cmty-forum-admin) > a{
+    color: white !important;
+}
