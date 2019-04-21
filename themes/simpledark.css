@@ -9,7 +9,9 @@
 .aops-scroll-outer,
 .cmty-post-wrapper,
 .cmty-post-textarea,
-.cmty-post-preview{
+.cmty-post-preview,
+.cmty-index-card,
+#community-all > * > *{
   background-color: black !important;
   border-color: darkgray !important;
   color: white;
