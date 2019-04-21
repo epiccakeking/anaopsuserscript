@@ -11,6 +11,8 @@
 .cmty-post-textarea,
 .cmty-post-preview,
 .cmty-index-card,
+textarea, input,
+.cmty-items-input-box,
 #community-all > * > *,
 .cmty-category-cell-bottom {
   background-color: black !important;
