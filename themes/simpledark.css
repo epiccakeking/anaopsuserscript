@@ -24,13 +24,18 @@ textarea, input,
 }
 
 #top-bar,
+.aops-panel,
+.image-content > *,
 .cmty-search-form > *,
 .cmty-search-page .cmty-category-cell-heading{
-  background-color: #444 !important;
+  background-color: #333 !important;
   border-color: darkgray !important;
   color: white;
 }
 /*Some other stuff*/
+.copy{
+    color: white;
+}
 #top-bar .site:not(.selected){
     color: lightgray !important;
 }
