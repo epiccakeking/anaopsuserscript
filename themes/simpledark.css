@@ -28,7 +28,7 @@ textarea, input,
 .image-content > *,
 .cmty-search-form > *,
 .cmty-search-page .cmty-category-cell-heading{
-  background-color: #333 !important;
+  background-color: #222 !important; /*Was using 333 but 222 makes some colored text in some places MUCH easier to read.*/
   border-color: darkgray !important;
   color: white;
 }
