@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.7.4
+// @version      2.7.5
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -16,7 +16,7 @@
     var temp=null //Might as well just declare it here.
     function cthemeupdate(){
         localStorage.setItem("ctheme",encodeURI(document.getElementById("cthemepopup").value));
-        updateTheme()
+        updateTheme();
     }
     function updateTheme(){
         var head=document.getElementsByTagName('head')[0];
@@ -89,7 +89,7 @@
                 temp.appendTo(x.parent());
                 temp=$($("#theme")[0]);
                 temp.appendTo(x.parent());
-                
+            }
         }, 1000);
     }, false);
     function commandprompter(){
