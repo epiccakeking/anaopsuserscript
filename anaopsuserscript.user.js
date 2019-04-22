@@ -13,6 +13,7 @@
 (function() {
     'use strict';
     // Your code here...
+    var temp=null //Might as well just declare it here.
     function cthemeupdate(){
         localStorage.setItem("ctheme",encodeURI(document.getElementById("cthemepopup").value));
         updateTheme()
@@ -83,7 +84,12 @@
                     document.getElementById("ctheme").remove();
                 }
                 catch{}
-            }
+            }else{
+                temp=$($("#theme")[0]);
+                temp.appendTo(x.parent());
+                temp=$($("#theme")[0]);
+                temp.appendTo(x.parent());
+                
         }, 1000);
     }, false);
     function commandprompter(){
