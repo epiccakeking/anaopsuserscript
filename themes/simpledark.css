@@ -1,7 +1,6 @@
 /*Styles most things that just need this*/
 .cmty-topic-cell,
 #header,
-#header *:not(.logo-img),
 #page-wrapper,
 .cmty-topic-watchers,
 .cmty-tag-filter > *,
@@ -17,12 +16,27 @@ textarea, input,
 .cmty-hide-content,
 .cmty-category-cell-bottom,
 .header-box .round-dropdown, .header-box .round-dropdown .cmty-main-crumb-search,
+.site.selected,
 #community-all > * > *{
   background-color: black !important;
   border-color: darkgray !important;
   color: white;
 }
+
+#top-bar,
+.cmty-search-form > *,
+.cmty-search-page .cmty-category-cell-heading{
+  background-color: #444 !important;
+  border-color: darkgray !important;
+  color: white;
+}
 /*Some other stuff*/
+#top-bar .site:not(.selected){
+    color: lightgray !important;
+}
+.site.selected{
+    color: white !important;
+}
 #breadcrumbs-wrapper{
     background-color: #004d53 !important;
 }
@@ -54,10 +68,10 @@ input, .cmty-post-textarea{
   color: white !important;
 }
 .topic-unread{
-    background: #333 !important;
+    background: #444 !important;
 }
 .topic-unread .cmty-topic-watchers{
-    background-color: #333 !important;
+    background-color: #444 !important;
 }
 .topic-unread .cmty-topic-cell-post{
     color: white !important;
