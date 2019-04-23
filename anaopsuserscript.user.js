@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.7.6
+// @version      2.8.0
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -59,8 +59,6 @@
             document.getElementById("mystyletoggles").innerHTML=styletogglesinner;
         }
     }
-    updateTheme()
-    updateToggles()
     function KeyPress(e) {
         var evtobj = window.event? event : e
         if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
@@ -68,6 +66,8 @@
 
     document.onkeydown = KeyPress;
     document.addEventListener('DOMContentLoaded', function() {
+        updateTheme()
+        updateToggles()
         var commbtn=document.createElement('button');
         commbtn.innerHTML="CMND";
         commbtn.id="commline";
