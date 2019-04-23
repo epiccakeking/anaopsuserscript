@@ -35,6 +35,7 @@ textarea, input,
 .aops-panel .box,
 .cmty-post-html pre[style="background-color:#f4f4f4;padding:10px"],
 .cmty-post-poll > .cmty-poll-display,
+.form,
 .cmty-search-page .cmty-category-cell-heading{
   background-color: #222 !important; /*Was using 333 but 222 makes some colored text in some places MUCH easier to read.*/
   border-color: darkgray !important;
