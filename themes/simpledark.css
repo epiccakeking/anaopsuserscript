@@ -45,6 +45,11 @@ textarea, input,
   border-color: darkgray !important;
   color: white;
 }
+/*Latex and asy*/
+.latex, .latexcenter, .asy-image{
+    background-color: transparent !important;
+    filter: invert(1) !important;
+}
 /*Some other stuff*/
 .copy{
     color: white;
@@ -64,10 +69,6 @@ textarea, input,
 }
 .aops-scroll-fade-bottom, .aops-scroll-fade-top{
     background: black !important;
-}
-.latex{
-    background-color: transparent !important;
-    filter: invert(1) !important;
 }
 .menu-cart-items{
     background-color: white !important;
