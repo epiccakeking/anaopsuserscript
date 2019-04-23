@@ -13,6 +13,7 @@ textarea, input,
 .cmty-index-card,
 .cmty-topic-mini-reply,
 .bbcode_quote,
+.online-section-outer,
 .cmty-hide-content,
 .cmty-category-cell-bottom,
 .header-box .round-dropdown, .header-box .round-dropdown .cmty-main-crumb-search,
@@ -27,6 +28,13 @@ textarea, input,
 .aops-panel,
 .image-content > *,
 .cmty-search-form > *,
+.intro-video-outer,
+.intro-video-outer .video-description,
+.ebk-index-item-main,
+.grid .main-option,
+.aops-panel .box,
+.cmty-post-html pre[style="background-color:#f4f4f4;padding:10px"],
+.cmty-post-poll > .cmty-poll-display,
 .cmty-search-page .cmty-category-cell-heading{
   background-color: #222 !important; /*Was using 333 but 222 makes some colored text in some places MUCH easier to read.*/
   border-color: darkgray !important;
@@ -35,6 +43,9 @@ textarea, input,
 /*Some other stuff*/
 .copy{
     color: white;
+}
+.grid .main-option a{
+    color: white !important;
 }
 #top-bar .site:not(.selected){
     color: lightgray !important;
