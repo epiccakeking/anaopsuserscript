@@ -55,7 +55,7 @@ textarea, input,
     color: white;
 }
 .grid .main-option a,
-.form-group .cmty-itemlist-username{
+.cmty-itemlist-username{
     color: white !important;
 }
 #top-bar .site:not(.selected){
