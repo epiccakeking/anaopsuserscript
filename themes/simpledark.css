@@ -1,7 +1,7 @@
 /*Styles most things that just need this*/
 .cmty-topic-cell,
 #header,
-#page-wrapper,
+#community-all > * > *,
 .cmty-topic-watchers,
 .cmty-tag-filter > *,
 .cmty-category-itembox-wrapper
@@ -18,7 +18,9 @@ textarea, input,
 .cmty-category-cell-bottom,
 .header-box .round-dropdown, .header-box .round-dropdown .cmty-main-crumb-search,
 .site.selected,
-#community-all > * > *{
+.cmty-posting-submenu,
+.aops-modal-body,
+#page-wrapper{
   background-color: black !important;
   border-color: darkgray !important;
   color: white;
@@ -36,6 +38,7 @@ textarea, input,
 .cmty-post-html pre[style="background-color:#f4f4f4;padding:10px"],
 .cmty-post-poll > .cmty-poll-display,
 .form,
+.aops-modal-frame,
 .cmty-search-page .cmty-category-cell-heading{
   background-color: #222 !important; /*Was using 333 but 222 makes some colored text in some places MUCH easier to read.*/
   border-color: darkgray !important;
