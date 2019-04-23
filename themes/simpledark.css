@@ -48,7 +48,8 @@ textarea, input,
 .copy{
     color: white;
 }
-.grid .main-option a{
+.grid .main-option a,
+.form-group .cmty-itemlist-username{
     color: white !important;
 }
 #top-bar .site:not(.selected){
