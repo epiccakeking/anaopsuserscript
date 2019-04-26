@@ -77,7 +77,7 @@ textarea, input,
 input, .cmty-post-textarea{
     color: white !important;
 }
-.cmty-post-username:not(*:not(.cmty-post-username)) > *{
+.cmty-post-username:not(.cmty-forum-mod):not(.cmty-forum-admin) > a{
     color: white !important;
 }
 .cmty-phone-poster:not(.cmty-forum-mod):not(.cmty-forum-admin) > *{ /*A stupid hack necessary because there is something that I can't override*/
