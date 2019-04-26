@@ -80,6 +80,9 @@ input, .cmty-post-textarea{
 .cmty-post-username:not(*:not(.cmty-post-username)) > *{
     color: white !important;
 }
+.cmty-phone-poster:not(.cmty-forum-mod):not(.cmty-forum-admin) > *{ /*A stupid hack necessary because there is something that I can't override*/
+    filter: invert(1) !important;
+}
 .feed-tab{
     color: gray !important;
 }
@@ -101,9 +104,6 @@ input, .cmty-post-textarea{
 }
 .triangle{
     display: none !important;
-}
-.cmty-post-username:not(.cmty-forum-mod):not(.cmty-forum-admin) > a{
-    color: white !important;
 }
 .menubar-label-link:not(.selected){
     color: rgb(75,75,200) !important;
