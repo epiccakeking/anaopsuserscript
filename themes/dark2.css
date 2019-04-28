@@ -20,6 +20,7 @@ textarea, input,
 .site.selected,
 .cmty-posting-submenu,
 .aops-modal-body,
+.cmty-subfeed > .cmty-topics-list > * > .aops-scroll-inner,
 #page-wrapper{
   background-color: black !important;
   border-color: darkgray !important;
