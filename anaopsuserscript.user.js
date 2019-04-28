@@ -85,7 +85,7 @@
                 }
                 catch(err){};
             }
-        }, 100);
+        }, 1000);
     }, false);
     function commandprompter(){
         var comm="";
