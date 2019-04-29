@@ -37,7 +37,7 @@ textarea, input,
 .ebk-index-item-main,
 .grid .main-option,
 .aops-panel .box,
-.cmty-post-html pre,
+.cmty-post-html > pre,
 .cmty-post-poll > .cmty-poll-display,
 .form,
 .aops-modal-frame,
@@ -108,4 +108,7 @@ input, .cmty-post-textarea{
 }
 .menubar-label-link:not(.selected){
     color: rgb(75,75,200) !important;
+}
+.python{
+    filter: invert(1) !important;
 }
