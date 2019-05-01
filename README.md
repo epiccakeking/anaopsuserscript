@@ -4,11 +4,12 @@ A userscript for artofproblemsolving.com<br>
 Click the CMND button or use CTRL+SHIFT+1 to open commands.<br>
 <br>
 Commands:<br>
-val: Set value in localStorage.<br>
-delval: Delete value in localstorage.<br>
-jump: Jump to post in topic.<br>
-theme: Changes theme. Equivalent to "val theme".<br>
+val (value) (value of value): Set value in localStorage.<br>
+delval (value): Delete value in localstorage.<br>
+jump (post number): Jump to post in current topic.<br>
+theme (theme): Changes theme. Equivalent to "val theme".<br>
 ctheme: Open the custom theme dialog.<br>
+user (user): Open the specified user's profile.
 <br>
 Values:<br>
 expandannouncements: All threads display in expanded form, allowing viewing watchers and seeing more of announcements.<br>
@@ -16,4 +17,4 @@ advancedfeed: Toggle on an option that might be useful for mobile users that use
 <br>
 Credits:<br>
 happycupcake/epiccakeking: Main userscript<br>
-casi/casithepython: Dark theme
+casi/casithepython: "dark" theme
