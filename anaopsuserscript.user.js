@@ -150,6 +150,12 @@
                     alert("Purge cancelled.");
                 }
             }
+        }else if (cp[0]="user"){
+            if (cp[1].toLowerCase()=="rick" && cp[2].toLowerCase()=="astley"){
+                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=43";
+            }else{
+                window.location.href = "https://artofproblemsolving.com/community/user/"+cp[1];
+            }
         }else{
             alert(cp[0]+" is not a command");
         }
