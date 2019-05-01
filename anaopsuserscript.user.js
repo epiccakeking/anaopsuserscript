@@ -120,6 +120,7 @@
             var cthemepopup=document.createElement('div');
             var cthemetextarea=document.createElement('textarea');
             cthemetextarea.id="cthemepopup";
+            cthemetextarea.value=decodeURI(localStorage.getItem("ctheme"))
             var cthemebutton=document.createElement('button');
             cthemebutton.type="button";
             cthemebutton.innerHTML="Update";
