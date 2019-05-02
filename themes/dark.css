@@ -1945,7 +1945,7 @@ a.cmty-my-books-link {
 .cmty-my-aops-navigation div {
     display: table-cell;
     height: 26px;
-    color: #696B6F;
+    color: white !important;
     font-size: 14px;
     line-height: 17px;
     vertical-align: top;
@@ -2025,7 +2025,7 @@ a.cmty-my-books-link {
 
 .cmty-page-my-aops .cmty-folder-top {
     padding-top: 5px;
-    background-color: #696B6F
+    background-color: black !important;
 }
 
 .fullscreen #cmty-my-aops-top {
@@ -2034,7 +2034,7 @@ a.cmty-my-books-link {
 
 .cmty-page-my-aops .cmty-category-cell-heading.cmty-small-category-heading {
     line-height: 16px;
-    background-color: #696B6F
+    background-color: black !important;
 }
 
 .cmty-page-my-profile .cmty-user-profile-pm {
@@ -2310,7 +2310,7 @@ a.cmty-my-books-link {
 
 .cmty-index-card {
     border-top: 5px solid #799cce;
-    background-color: #696B6F;
+    background-color: black !important;
     position: relative
 }
 
