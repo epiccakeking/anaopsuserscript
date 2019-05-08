@@ -1,4 +1,6 @@
 # anaopsuserscript
+This script is an unofficial add on for artofproblemsolving.com and is not affiliated in any way with AoPS Incorporated.
+
 A userscript for artofproblemsolving.com<br>
 <a href="https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js">install userscript</a><br>
 Click the CMND button or use CTRL+SHIFT+1 to open commands.<br>
