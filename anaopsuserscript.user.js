@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.9.4
+// @version      2.9.5
 // @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
@@ -151,7 +151,7 @@
                     alert("Purge cancelled.");
                 }
             }
-        }else if (cp[0]="user"){
+        }else if (cp[0]=="user"){
             if (cp[1].toLowerCase()=="rick" && cp[2].toLowerCase()=="astley"){
                 window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=43";
             }else{
