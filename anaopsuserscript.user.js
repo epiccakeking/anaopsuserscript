@@ -1,8 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.9.6
-// @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
+// @version      2.10.0
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -116,6 +115,10 @@
                 updateTheme();
             }
             updateToggles()
+        }else if (cp[0]=="clearvals"){
+            if (confirm("Clear all stored values ("+Object.keys(localStorage)+")?")==true){
+                localStorage.clear();
+            }
         }else if (cp[0]=="ctheme"){
             var cthemepopup=document.createElement('div');
             var cthemetextarea=document.createElement('textarea');
@@ -151,6 +154,11 @@
                     alert("Purge cancelled.");
                 }
             }
+        }else if (cp[0]=="help"){
+            var helppopup = document.createElement("iframe");
+            helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/";
+            helppopup.style = "width: 50vw; height: 50vh";
+            alert(helppopup);
         }else if (cp[0]=="user"){
             if (cp[1].toLowerCase()=="rick" && cp[2].toLowerCase()=="astley"){
                 window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=43";
