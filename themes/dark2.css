@@ -21,7 +21,8 @@ textarea, input,
 .cmty-posting-submenu,
 .aops-modal-body,
 .cmty-subfeed > .cmty-topics-list > * > .aops-scroll-inner,
-#page-wrapper{
+#page-wrapper,
+html{
   background-color: black !important;
   border-color: darkgray !important;
   color: white;
