@@ -1,8 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.9.6
-// @downloadURL  https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js
+// @version      2.9.6a1
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -116,6 +115,10 @@
                 updateTheme();
             }
             updateToggles()
+        }else if (cp[0]=="clearvals"){
+            if (confirm("Clear all stored values ("+Object.keys(localStorage)+")?")==true){
+                localStorage.clear();
+            }
         }else if (cp[0]=="ctheme"){
             var cthemepopup=document.createElement('div');
             var cthemetextarea=document.createElement('textarea');
