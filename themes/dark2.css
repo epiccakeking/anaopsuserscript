@@ -46,7 +46,9 @@ html{
 select,
 select *,
 .aops-modal-frame,
-.cmty-category-cell-heading{
+#flyout,
+.cmty-search-results .cmty-category-cell-heading,
+.cmty-search-page .cmty-category-cell-heading{
   background-color: #222 !important; /*Was using 333 but 222 makes some colored text in some places MUCH easier to read.*/
   border-color: darkgray !important;
   color: white;
