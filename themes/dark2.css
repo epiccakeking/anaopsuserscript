@@ -5,7 +5,6 @@
 .cmty-topic-watchers,
 .cmty-tag-filter > *,
 .cmty-category-itembox-wrapper,
-.aops-scroll-outer,
 .cmty-search-window,
 .cmty-post-wrapper,
 textarea, input,
@@ -76,7 +75,7 @@ select *,
     background-color: #004d53 !important;
 }
 .aops-scroll-fade-bottom, .aops-scroll-fade-top{
-    background: black !important;
+    filter: invert(1) !important;
 }
 .menu-cart-items{
     background-color: white !important;
