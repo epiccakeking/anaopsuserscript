@@ -53,11 +53,13 @@ select *,
   border-color: darkgray !important;
   color: white;
 }
+
 /*Latex and asy*/
 .latex, .latexcenter, .asy-image{
     background-color: transparent !important;
     filter: invert(1) hue-rotate(180deg); !important;
 }
+
 /*Some other stuff*/
 .copy{
     color: white;
@@ -104,6 +106,7 @@ input, .cmty-post-textarea{
   background: gray !important;
   color: white !important;
 }
+
 /*Topic colors*/
 .topic-unread{
     background: #333 !important;
@@ -114,13 +117,15 @@ input, .cmty-post-textarea{
 .cmty-topic-cell-post{
     color: #ddd !important;
 }
-/*Menubars (ONLINE ScHOOL, BOOKSTORE, COMMUNITY, RESOURCES)*/
+
+/*Menubars (ONLINE SCHOOL, BOOKSTORE, COMMUNITY, RESOURCES)*/
 .triangle{
     display: none !important;
 }
 .menubar-label-link:not(.selected){
     color: rgb(75,75,200) !important;
 }
+
 /*Python*/
 .cmty-post-html > pre{
     background: #eee !important;
