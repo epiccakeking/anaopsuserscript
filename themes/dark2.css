@@ -40,7 +40,6 @@ html{
 .ebk-index-item-main,
 .grid .main-option,
 .aops-panel .box,
-.cmty-post-html > pre,
 .cmty-post-poll > .cmty-poll-display,
 .cmty-category-cell,
 .form,
@@ -105,21 +104,25 @@ input, .cmty-post-textarea{
   background: gray !important;
   color: white !important;
 }
+/*Topic colors*/
 .topic-unread{
-    background: #444 !important;
+    background: #333 !important;
 }
 .topic-unread .cmty-topic-watchers{
-    background-color: #444 !important;
+    background-color: #333 !important;
 }
 .cmty-topic-cell-post{
     color: #ddd !important;
 }
+/*Menubars (ONLINE ScHOOL, BOOKSTORE, COMMUNITY, RESOURCES)*/
 .triangle{
     display: none !important;
 }
 .menubar-label-link:not(.selected){
     color: rgb(75,75,200) !important;
 }
-.python{
+/*Python*/
+.cmty-post-html > pre{
+    background: #eee !important;
     filter: invert(1) !important;
 }
