@@ -132,8 +132,9 @@ input, .cmty-post-textarea{
     color: rgb(75,75,200) !important;
 }
 
-/*Python*/
-.cmty-post-html > pre{
+/*Code blocks*/
+.cmty-post-html pre{
+    color: black;
     background: #eee !important;
     filter: invert(1) !important;
 }
