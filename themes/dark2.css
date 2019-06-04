@@ -1,6 +1,7 @@
 /*Styles most things that just need this*/
 .cmty-topic-cell,
 #header,
+.login-dropdown-content,
 #community-all > * > *,
 .cmty-topic-watchers,
 .cmty-tag-filter > *,
@@ -40,8 +41,10 @@ html{
 .ebk-index-item-main,
 .grid .main-option,
 .aops-panel .box,
+#quote-panel,
 .cmty-post-poll > .cmty-poll-display,
 .cmty-category-cell,
+.cmty-editable-active-row,
 .form,
 select,
 select *,
@@ -74,8 +77,8 @@ select *,
 .site.selected{
     color: white !important;
 }
-#breadcrumbs-wrapper{
-    background-color: #004d53 !important;
+#breadcrumbs .title, #breadcrumbs-wrapper {
+    background-color: rgb(0, 79, 86);
 }
 .aops-scroll-fade-bottom, .aops-scroll-fade-top{
     filter: invert(1) !important;
@@ -87,15 +90,18 @@ select *,
 input, .cmty-post-textarea{
     color: white !important;
 }
-.cmty-post-username:not([class*="cmty-forum"]):not(.cmty-user-admin) > a, .cmty-post-username:not([class*="cmty-forum"]):not(.cmty-user-admin){
+
+/*Usernames*/
+.cmty-post-username:not([class*="cmty-forum"]):not(.cmty-user-admin) > a{
     color: white !important;
 }
-.cmty-phone-poster:not([class*="cmty-forum"]):not(.cmty-user-admin){
+.cmty-phone-poster:not([class*="cmty-forum"]):not(.cmty-user-admin) > *{ /*A stupid hack necessary because there is something that I can't override*/
     filter: invert(1) !important;
 }
 .cmty-user-admin a, .cmty-post .cmty-user-admin::before {
     color: #009fad !important;
 }
+/*Feed recolors*/
 .feed-tab{
     color: gray !important;
 }
@@ -130,4 +136,38 @@ input, .cmty-post-textarea{
 .cmty-post-html > pre{
     background: #eee !important;
     filter: invert(1) !important;
+}
+
+/*Class table*/
+.pioo{
+    background: none !important;
+}
+.index-content .item-boxes tr {
+    background-color: #333;
+
+}
+.index-content .item-boxes tr:nth-child(2n) {
+    background-color: #444;
+}
+.book-tables table, .split-narrow table{
+    border-color: #000 !important;
+}
+
+/*Reaper*/
+table.aops tr {
+    background-color: black;
+}
+table.aops tr:nth-child(2n) {
+    background-color: #444;
+}
+#side-column{
+    background-color: rgb(0, 79, 86) !important;
+}
+#main-content.left-navigation {
+    background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 236 1' xmlns='http://www.w3.org/2000/svg'><line stroke='rgb(0, 79, 86)' x1='8' y1='0' x2='230' y2='0' stroke-width='2'/></svg>");
+}
+
+/*Login dropdown*/
+.login-dropdown .menu-item{
+    color: rgb(75,75,200);
 }
