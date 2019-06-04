@@ -1,6 +1,7 @@
 /*Styles most things that just need this*/
 .cmty-topic-cell,
 #header,
+.login-dropdown-content,
 #community-all > * > *,
 .cmty-topic-watchers,
 .cmty-tag-filter > *,
@@ -150,4 +151,9 @@ input, .cmty-post-textarea{
 }
 .book-tables table, .split-narrow table{
     border-color: #000 !important;
+}
+
+/*Login dropdown*/
+.login-dropdown .menu-item{
+    color: rgb(75,75,200);
 }
