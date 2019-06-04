@@ -87,10 +87,10 @@ select *,
 input, .cmty-post-textarea{
     color: white !important;
 }
-.cmty-post-username:not([class*="cmty-forum"]):not(.cmty-user-admin) > a{
+.cmty-post-username:not([class*="cmty-forum"]):not(.cmty-user-admin) > a, .cmty-post-username:not([class*="cmty-forum"]):not(.cmty-user-admin){
     color: white !important;
 }
-.cmty-phone-poster:not([class*="cmty-forum"]):not(.cmty-user-admin) > *{ /*A stupid hack necessary because there is something that I can't override*/
+.cmty-phone-poster:not([class*="cmty-forum"]):not(.cmty-user-admin){
     filter: invert(1) !important;
 }
 .cmty-user-admin a, .cmty-post .cmty-user-admin::before {
