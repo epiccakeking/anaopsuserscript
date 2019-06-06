@@ -61,7 +61,7 @@ select *,
 /*Latex and asy*/
 .latex, .latexcenter, .asy-image{
     background-color: transparent !important;
-    filter: invert(1) hue-rotate(180deg); !important;
+    filter: invert(1) hue-rotate(180deg) !important;
 }
 
 /*Some other stuff*/
@@ -134,11 +134,13 @@ input, .cmty-post-textarea{
 }
 
 /*Code blocks*/
-.cmty-post-html pre{
+.pywindow,
+.cmty-post-html pre[style*="background-color:"]:not([class*=""]){
     color: black;
     background: #eee !important;
-    filter: invert(1) !important;
+    filter: invert(1) hue-rotate(180deg) !important;
 }
+
 
 /*Class table*/
 .pioo{
