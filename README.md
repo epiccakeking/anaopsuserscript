@@ -3,7 +3,7 @@ This script is an unofficial add on for artofproblemsolving.com and is not affil
 
 A userscript for artofproblemsolving.com<br>
 <a href="https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js">install userscript</a><br>
-<a href="https://github.com/epiccakeking/anaopsuserscript/raw/test/anaopsuserscript.user.js">install test version (If you want to help me find bugs)</a><br>
+<br>
 Click the CMND button or use CTRL+SHIFT+1 to open commands.<br>
 <br>
 Commands:<br>
@@ -19,6 +19,7 @@ help: Displays readme.md (This file).<br>
 Values:<br>
 expandannouncements: All threads display in expanded form, allowing viewing watchers and seeing more of announcements.<br>
 advancedfeed: Toggle on an option that might be useful for mobile users that use the feed a lot.<br>
+notifflyouts: Flyouts are browser notifications instead.
 <br>
 Credits:<br>
 happycupcake/epiccakeking: Main userscript<br>
