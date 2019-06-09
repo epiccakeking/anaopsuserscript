@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.10.0
+// @version      2.11.0a
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -73,6 +73,18 @@
         commbtn.style="position: fixed !important; bottom: 0px !important; left: 0px !important; !important; overflow: hidden !important; color: black !important; background-color: white !important; z-index: 100000000000000 !important; resize: none !important;"
         commbtn.onclick=commandprompter;
         document.body.appendChild(commbtn);
+
+        if (localStorage.getItem('notifflyout')=="true"){
+            function Notif(x){
+                var notification = new Notification(x, {tag: x});
+                setTimeout(notification.close.bind(notification), 4000);
+            }
+            AoPS.Ui.Flyout.display=Notif;
+            Notification.requestPermission().then(function(result) {
+                console.log(result);
+            });
+        }
+
         setTimeout(function(){
             if ($("#header")[0].firstChild.attributes){
                 try{
