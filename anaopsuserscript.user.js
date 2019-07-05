@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.12.1
+// @version      2.12.2
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -74,15 +74,22 @@
         commbtn.onclick=commandprompter;
         document.body.appendChild(commbtn);
 
-        if (localStorage.getItem('notifflyout')=="true"){
+        if (localStorage.getItem('notifflyouts')=="true"){
             function Notif(x){
                 var notification = new Notification(x, {tag: x});
                 setTimeout(notification.close.bind(notification), 4000);
             }
             AoPS.Ui.Flyout.display=Notif;
-            Notification.requestPermission().then(function(result) {
-                console.log(result);
-            });
+            setTimeout(function(){
+                if (Notification.permission == "default"){
+                    alert("Some browsers require interaction before triggering the notification permission request. Please click anywhere after closing this prompt, accept the permission, then refresh.");
+                    $("body").click(function(){
+                        Notification.requestPermission();
+                    })
+                }else if(Notification.permission == 'denied'){
+                    alert("It would appear you have blocked notifications. Please either unblock and refresh for further instructions, or disable notification flyouts using \"delval notifflyouts\".");
+                }
+            }, 1000);
         }
 
         setTimeout(function(){
