@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AoPS Commands
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.11.0a
+// @version      2.12.0
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -177,6 +177,8 @@
             }else{
                 window.location.href = "https://artofproblemsolving.com/community/user/"+cp[1];
             }
+        }else if (cp[0]=="removetopic"){
+            $($(".focus-topic")[$(".focus-topic").length-1]).trigger($.Event("click", { ctrlKey: true }));
         }else{
             alert(cp[0]+" is not a command");
         }
