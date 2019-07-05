@@ -14,6 +14,7 @@ jump (post number): Jump to post in current topic.<br>
 theme (theme): Changes theme. Equivalent to "val theme".<br>
 ctheme: Open the custom theme dialog.<br>
 user (user): Open the specified user's profile.<br>
+removetopic: Removes the current feed topic by simulating a ctrl click.<br>
 help: Displays readme.md (This file).<br>
 <br>
 Values:<br>
