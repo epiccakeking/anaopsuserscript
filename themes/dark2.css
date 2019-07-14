@@ -176,6 +176,7 @@ table.aops tr:nth-child(2n) {
 .login-dropdown .menu-item{
     color: rgb(75,75,200);
 }
+/*Alcumus*/
 .white-panel{
   background: black !important;
 }
@@ -187,10 +188,12 @@ table.aops tr:nth-child(2n) {
 }
 .alc--main{
   background: black !important;
+  color: white !important;
 }
 .alc-problem-input-bar{
   background: #333 !important;
 }
+/*Alcumus forum color change*/
 .cmty-topic-cell-subject[style*="color: rgb(31, 61, 123);"]{
   color: rgb(0, 83, 255) !important;
 }
