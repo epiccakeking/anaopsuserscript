@@ -176,3 +176,18 @@ table.aops tr:nth-child(2n) {
 .login-dropdown .menu-item{
     color: rgb(75,75,200);
 }
+.white-panel{
+  background: black !important;
+}
+.alc-active-quests-panel *, .alc-log-panel *, .menu *{
+  color: #0041ff !important;
+}
+.menu > *{
+  background: #333 !important;
+}
+.alc--main{
+  background: black !important;
+}
+.alc-problem-input-bar{
+  background: #333 !important;
+}
