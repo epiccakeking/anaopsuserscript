@@ -200,3 +200,12 @@ table.aops tr:nth-child(2n) {
 #tab-contents{
   background: black !important;
 }
+.instructor-row{
+  background: #333;
+}
+.instructor-row:hover{
+  background: #222 !important;
+}
+.testimonial, .grey-panel .content{
+  background: #333 !important;
+}
