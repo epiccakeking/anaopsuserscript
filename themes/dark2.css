@@ -197,3 +197,6 @@ table.aops tr:nth-child(2n) {
 .cmty-topic-cell-subject[style*="color: rgb(31, 61, 123);"]{
   color: rgb(0, 83, 255) !important;
 }
+#tab-contents{
+  background: black !important;
+}
