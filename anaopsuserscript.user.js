@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         AoPS Commands
+// @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
 // @version      2.12.2
 // @description  try to take over the world!
