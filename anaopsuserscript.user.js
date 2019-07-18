@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.12.2
+// @version      2.13.0
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -90,6 +90,9 @@
                     alert("It would appear you have blocked notifications. Please either unblock and refresh for further instructions, or disable notification flyouts using \"delval notifflyouts\".");
                 }
             }, 1000);
+        }
+        if (localStorage.getItem('insomnia')=="true"){
+            AoPS.Community.Constants.idle_monitor_interval=-1;
         }
 
         setTimeout(function(){
