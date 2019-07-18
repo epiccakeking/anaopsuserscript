@@ -1,4 +1,4 @@
-# anaopsuserscript
+# An AoPS Userscript
 This script is an unofficial add on for artofproblemsolving.com and is not affiliated in any way with AoPS Incorporated.
 
 A userscript for artofproblemsolving.com<br>
@@ -17,10 +17,11 @@ user (user): Open the specified user's profile.<br>
 removetopic: Removes the current feed topic by simulating a ctrl click.<br>
 help: Displays readme.md (This file).<br>
 <br>
-Values:<br>
+Values (Set to true to enable):<br>
 expandannouncements: All threads display in expanded form, allowing viewing watchers and seeing more of announcements.<br>
 advancedfeed: Toggle on an option that might be useful for mobile users that use the feed a lot.<br>
-notifflyouts: Flyouts are browser notifications instead.
+notifflyouts: Flyouts are browser notifications instead.<br>
+insomnia: AoPS Community won't go to sleep.<br>
 <br>
 Credits:<br>
 happycupcake/epiccakeking: Main userscript<br>
