@@ -16,6 +16,7 @@ ctheme: Open the custom theme dialog.<br>
 user (user): Open the specified user's profile.<br>
 removetopic: Removes the current feed topic by simulating a ctrl click.<br>
 help: Displays readme.md (This file).<br>
+log (number): Displays last (number) console.log outputs.<br>
 <br>
 Values (Set to true to enable):<br>
 expandannouncements: All threads display in expanded form, allowing viewing watchers and seeing more of announcements.<br>
