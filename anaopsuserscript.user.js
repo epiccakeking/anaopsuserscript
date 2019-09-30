@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      2.13.1
+// @version      3.0
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -12,6 +12,11 @@
 (function() {
     'use strict';
     // Your code here...
+    var glog=[]
+    function log(x){
+        glog.push(x)
+        console.log(x)
+    }
     var temp=null //Might as well just declare it here.
     function cthemeupdate(){
         localStorage.setItem("ctheme",encodeURI(document.getElementById("cthemepopup").value));
@@ -80,7 +85,7 @@
                 setTimeout(notification.close.bind(notification), 4000);
             }
             AoPS.Ui.Flyout.display=Notif;
-            console.log("Notification flyouts enabled");
+            log("Notification flyouts enabled");
             setTimeout(function(){
                 if (Notification.permission == "default"){
                     alert("Some browsers require interaction before triggering the notification permission request. Please click anywhere after closing this prompt, accept the permission, then refresh.");
@@ -94,7 +99,7 @@
         }
         if (localStorage.getItem('insomnia')=="true"){
             AoPS.Community.Constants.idle_monitor_interval=-1;
-            console.log("Insomnia enabled");
+            log("Insomnia enabled");
         }
 
         setTimeout(function(){
@@ -117,82 +122,101 @@
         if (cp[0]=="theme"){
             cp.unshift("val");
         }
-        if (cp[0]=="jump"){
-            var x=window.location.href;
-            x=x.split("_")[0];
-            var n=Number(cp[1]);
-            if (x.lastIndexOf("h")<10){
-                alert("Not viewing a topic.");
-            }else if (isNaN(n)){
-                alert("Not a number");
-            }else if (n<1){
-                alert('Invalid value for jump.');
-            }else{
-                if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
-                    x=x.substring(0,x.lastIndexOf("p"));
-                }
-                window.location.href=x+"n"+cp[1];
-            }
-        }else if (cp[0]=="val"){
-            localStorage.setItem(cp[1], cp[2]);
-            if (cp[1]=="theme" || cp[1]=="ctheme"){
-                updateTheme();
-            }
-            updateToggles()
-        }else if (cp[0]=="clearvals"){
-            if (confirm("Clear all stored values ("+Object.keys(localStorage)+")?")==true){
-                localStorage.clear();
-            }
-        }else if (cp[0]=="ctheme"){
-            var cthemepopup=document.createElement('div');
-            var cthemetextarea=document.createElement('textarea');
-            cthemetextarea.id="cthemepopup";
-            cthemetextarea.value=decodeURI(localStorage.getItem("ctheme"))
-            var cthemebutton=document.createElement('button');
-            cthemebutton.type="button";
-            cthemebutton.innerHTML="Update";
-            cthemebutton.onclick=cthemeupdate
-            cthemepopup.appendChild(cthemetextarea);
-            cthemepopup.appendChild(cthemebutton);
-            alert(cthemepopup)
-        }else if (cp[0]=="delval"){
-            localStorage.removeItem(cp[1]);
-            updateToggles()
-        }else if (cp[0]=="purge"){
-            var purgenum=Number(cp[1]);
-            if (isNaN(purgenum)){
-                alert("Not a number");
-            }else if (purgenum<1){
-                alert('Invalid value for purge.');
-            }else{
-                if (confirm("Confirm purge?")==true){
-                    for (let i = 0; i < purgenum; i++) {
-                        setTimeout(function(){
-                            var a = document.getElementsByClassName('cmty-post-delete');
-                            a[a.length-1].click();
-                            var b = document.getElementsByClassName("btn-primary")[0];
-                            b.click();
-                        }, i * 100);
-                    }
+        switch(cp[0]){
+            case "jump":
+                var x=window.location.href;
+                x=x.split("_")[0];
+                var n=Number(cp[1]);
+                if (x.lastIndexOf("h")<10){
+                    alert("Not viewing a topic.");
+                }else if (isNaN(n)){
+                    alert("Not a number");
+                }else if (n<1){
+                    alert('Invalid value for jump.');
                 }else{
-                    alert("Purge cancelled.");
+                    if (!(x.substring(x.lastIndexOf("p")-1,x.lastIndexOf("p")+2)=="fpr")){
+                        x=x.substring(0,x.lastIndexOf("p"));
+                    }
+                    window.location.href=x+"n"+cp[1];
                 }
-            }
-        }else if (cp[0]=="help"){
-            var helppopup = document.createElement("iframe");
-            helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/";
-            helppopup.style = "width: 50vw; height: 50vh";
-            alert(helppopup);
-        }else if (cp[0]=="user"){
-            if (cp[1].toLowerCase()=="rick" && cp[2].toLowerCase()=="astley"){
-                window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=43";
-            }else{
-                window.location.href = "https://artofproblemsolving.com/community/user/"+cp[1];
-            }
-        }else if (cp[0]=="removetopic"){
-            $($(".focus-topic")[$(".focus-topic").length-1]).trigger($.Event("click", { ctrlKey: true }));
-        }else{
-            alert(cp[0]+" is not a command");
+                break;
+            case "val":
+                localStorage.setItem(cp[1], cp[2]);
+                if (cp[1]=="theme" || cp[1]=="ctheme"){
+                    updateTheme();
+                }
+                updateToggles()
+                break;
+            case "clearvals":
+                if (confirm("Clear all stored values ("+Object.keys(localStorage)+")?")==true){
+                    localStorage.clear();
+                }
+                break;
+            case "ctheme":
+                var cthemepopup=document.createElement('div');
+                var cthemetextarea=document.createElement('textarea');
+                cthemetextarea.id="cthemepopup";
+                cthemetextarea.value=decodeURI(localStorage.getItem("ctheme"))
+                var cthemebutton=document.createElement('button');
+                cthemebutton.type="button";
+                cthemebutton.innerHTML="Update";
+                cthemebutton.onclick=cthemeupdate
+                cthemepopup.appendChild(cthemetextarea);
+                cthemepopup.appendChild(cthemebutton);
+                alert(cthemepopup)
+                break;
+            case "delval":
+                localStorage.removeItem(cp[1]);
+                updateToggles()
+                break;
+            case "purge":
+                var purgenum=Number(cp[1]);
+                if (isNaN(purgenum)){
+                    alert("Not a number");
+                }else if (purgenum<1){
+                    alert('Invalid value for purge.');
+                }else{
+                    if (confirm("Confirm purge?")==true){
+                        for (let i = 0; i < purgenum; i++) {
+                            setTimeout(function(){
+                                var a = document.getElementsByClassName('cmty-post-delete');
+                                a[a.length-1].click();
+                                var b = document.getElementsByClassName("btn-primary")[0];
+                                b.click();
+                            }, i * 100);
+                        }
+                    }else{
+                        alert("Purge cancelled.");
+                    }
+                }
+                break;
+            case "help":
+                var helppopup = document.createElement("iframe");
+                helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/";
+                helppopup.style = "width: 50vw; height: 50vh";
+                alert(helppopup);
+                break;
+            case "user":
+                if (cp[1].toLowerCase()=="rick" && cp[2].toLowerCase()=="astley"){
+                    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=43";
+                }else{
+                    window.location.href = "https://artofproblemsolving.com/community/user/"+cp[1];
+                }
+                break;
+            case "removetopic":
+                $($(".focus-topic")[$(".focus-topic").length-1]).trigger($.Event("click", { ctrlKey: true }));
+                break;
+            case "log":
+                temp="";
+                for (var pos = glog.length-cp[1]; pos < glog.length; pos++){
+                    if (glog[pos]!=undefined){
+                        temp+=glog[pos]+'<br>';
+                    }
+                }
+                alert(temp);
+                break;
+            default:
+                alert(cp[0]+" is not a command");
         }
     }
 })();
