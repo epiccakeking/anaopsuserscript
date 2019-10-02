@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.0
+// @version      3.1a
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -72,13 +72,16 @@
     document.addEventListener('DOMContentLoaded', function() {
         updateTheme()
         updateToggles()
-        var commbtn=document.createElement('button');
-        commbtn.innerHTML="CMND";
-        commbtn.id="commline";
-        commbtn.style="position: fixed !important; bottom: 0px !important; left: 0px !important; !important; overflow: hidden !important; color: black !important; background-color: white !important; z-index: 100000000000000 !important; resize: none !important;"
-        commbtn.onclick=commandprompter;
-        document.body.appendChild(commbtn);
-
+        if (localStorage.getItem('nobutton')!="true"){
+            var commbtn=document.createElement('button');
+            commbtn.innerHTML="CMND";
+            commbtn.id="commline";
+            commbtn.style="position: fixed !important; bottom: 0px !important; left: 0px !important; !important; overflow: hidden !important; color: black !important; background-color: white !important; z-index: 100000000000000 !important; resize: none !important;"
+            commbtn.onclick=commandprompter;
+            document.body.appendChild(commbtn);
+        }else{
+            log("User has disabled command button!");
+        }
         if (localStorage.getItem('notifflyouts')=="true"){
             function Notif(x){
                 var notification = new Notification(x, {tag: x});
