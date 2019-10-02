@@ -202,7 +202,7 @@
                 break;
             case "ver":
                 helppopup = document.createElement("iframe");
-                helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/updatenotes/"+ver+".md";
+                helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/updatenotes/"+ver+".html";
                 helppopup.style = "width: 50vw; height: 50vh";
                 alert(helppopup);
                 break;
