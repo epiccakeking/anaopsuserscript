@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.1a
+// @version      3.1a1
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -196,6 +196,12 @@
             case "help":
                 var helppopup = document.createElement("iframe");
                 helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/";
+                helppopup.style = "width: 50vw; height: 50vh";
+                alert(helppopup);
+                break;
+            case "updatenotes":
+                helppopup = document.createElement("iframe");
+                helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/updatenotes.md";
                 helppopup.style = "width: 50vw; height: 50vh";
                 alert(helppopup);
                 break;
