@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.2a1
+// @version      3.2a2
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -226,8 +226,7 @@
                 alert(temp);
                 break;
             case 'valedit':
-                alert(`<select id="valeditselect" oncreate="valload(this.value)" onchange="valload(this.value)">
-<option value="">Select a value</option>
+                alert(`<select id="valeditselect" "onchange="valload(this.value)">
 <option value="notifflyouts">Flyouts as notifications</option>
 <option value="insomnia">Keep community awake</option>
 <option value="nobutton">No command button</option>
@@ -240,6 +239,7 @@
 function valload(val) {
 document.getElementById('valeditval').value=localStorage.getItem(val);
 }
+valload(document.getElementById('valeditselect').value);
 </script>`);
                 break;
             default:
