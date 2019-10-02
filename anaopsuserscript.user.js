@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.1a2
+// @version      3.1
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
