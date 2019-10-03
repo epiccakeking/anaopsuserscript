@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.2a2
+// @version      3.2a3
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -226,7 +226,7 @@
                 alert(temp);
                 break;
             case 'valedit':
-                alert(`<select id="valeditselect" "onchange="valload(this.value)">
+                alert(`<select id="valeditselect" onchange="valload(this.value)">
 <option value="notifflyouts">Flyouts as notifications</option>
 <option value="insomnia">Keep community awake</option>
 <option value="nobutton">No command button</option>
