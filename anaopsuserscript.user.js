@@ -9,6 +9,32 @@
 // @run-at document-start
 // ==/UserScript==
 
+function updateTheme(){
+	var head=document.getElementsByTagName('head')[0];
+	var theme=localStorage.getItem("theme");
+	var ctheme=localStorage.getItem("ctheme");
+	if (theme!=null && theme!="none"){
+		if (document.getElementById("theme")==null){
+			var elmnttheme=document.createElement('link');
+			elmnttheme.id="theme"
+			elmnttheme.rel='stylesheet';
+			elmnttheme.type='text/css';
+			elmnttheme.media='all';
+			head.appendChild(elmnttheme);
+		}
+		document.getElementById("theme").href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
+	}
+	if (ctheme!=null){
+		if (document.getElementById("ctheme")==null){
+			var elmntctheme=document.createElement('style');
+			elmntctheme.id="ctheme"
+			head.appendChild(elmntctheme);
+		}
+		document.getElementById("ctheme").innerHTML=decodeURI(ctheme);
+	}
+}
+updateTheme();
+
 (function() {
     'use strict';
     // Your code here...
@@ -22,30 +48,6 @@
     function cthemeupdate(){
         localStorage.setItem("ctheme",encodeURI(document.getElementById("cthemepopup").value));
         updateTheme();
-    }
-    function updateTheme(){
-        var head=document.getElementsByTagName('head')[0];
-        var theme=localStorage.getItem("theme");
-        var ctheme=localStorage.getItem("ctheme");
-        if (theme!=null && theme!="none"){
-            if (document.getElementById("theme")==null){
-                var elmnttheme=document.createElement('link');
-                elmnttheme.id="theme"
-                elmnttheme.rel='stylesheet';
-                elmnttheme.type='text/css';
-                elmnttheme.media='all';
-                head.appendChild(elmnttheme);
-            }
-            document.getElementById("theme").href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
-        }
-        if (ctheme!=null){
-            if (document.getElementById("ctheme")==null){
-                var elmntctheme=document.createElement('style');
-                elmntctheme.id="ctheme"
-                head.appendChild(elmntctheme);
-            }
-            document.getElementById("ctheme").innerHTML=decodeURI(ctheme);
-        }
     }
     function updateToggles(){
         var styletogglesinner=""
