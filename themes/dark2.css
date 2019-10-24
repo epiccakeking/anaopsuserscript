@@ -209,3 +209,11 @@ table.aops tr:nth-child(2n) {
 .testimonial, .grey-panel .content{
   background: #333 !important;
 }
+.site-link.selected{
+    background-color:    #000 !important;
+    color: white;
+}
+.site.dropdown-visible > .site-link,
+.site-dropdown-wrapper{
+    background-color: #222 !important;
+}
