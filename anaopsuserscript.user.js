@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.2a3
+// @version      3.3
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -47,6 +47,7 @@
             document.getElementById("ctheme").innerHTML=decodeURI(ctheme);
         }
     }
+    updateTheme()
     function updateToggles(){
         var styletogglesinner=""
         if (localStorage.getItem('expandannouncements')=="true"){
@@ -71,7 +72,6 @@
 
     document.onkeydown = KeyPress;
     document.addEventListener('DOMContentLoaded', function() {
-        updateTheme()
         updateToggles()
         if (localStorage.getItem('nobutton')!="true"){
             var commbtn=document.createElement('button');
