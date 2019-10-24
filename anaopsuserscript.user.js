@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.1
+// @version      3.2a3
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -12,7 +12,7 @@
 (function() {
     'use strict';
     // Your code here...
-    var ver="3.1"
+    var ver="3.2"
     var glog=[]
     function log(x){
         glog.push(x)
@@ -224,6 +224,23 @@
                     }
                 }
                 alert(temp);
+                break;
+            case 'valedit':
+                alert(`<select id="valeditselect" onchange="valload(this.value)">
+<option value="notifflyouts">Flyouts as notifications</option>
+<option value="insomnia">Keep community awake</option>
+<option value="nobutton">No command button</option>
+</select>
+<select id='valeditval' onchange="localStorage.setItem(document.getElementById('valeditselect').value, this.value)">
+<option value="true">On</option>
+<option value="false">Off</option>
+</select>
+<script>
+function valload(val) {
+document.getElementById('valeditval').value=localStorage.getItem(val);
+}
+valload(document.getElementById('valeditselect').value);
+</script>`);
                 break;
             default:
                 alert(cp[0]+" is not a command");
