@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.3
+// @version      3.3.1
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -85,7 +85,7 @@
         }
         if (localStorage.getItem('notifflyouts')=="true"){
             function Notif(x){
-                var notification = new Notification(x, {tag: x});
+                var notification = new Notification("An AoPS Userscript", {body: x,tag: x});
                 setTimeout(notification.close.bind(notification), 4000);
             }
             AoPS.Ui.Flyout.display=Notif;
