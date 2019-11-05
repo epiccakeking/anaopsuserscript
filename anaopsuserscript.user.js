@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.3.1
+// @version      3.4
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -230,6 +230,8 @@
 <option value="notifflyouts">Flyouts as notifications</option>
 <option value="insomnia">Keep community awake</option>
 <option value="nobutton">No command button</option>
+<option value="expandannouncements">Expand Announcements</option>
+<option value="advancedfeed">Advanced feed</option>
 </select>
 <select id='valeditval' onchange="localStorage.setItem(document.getElementById('valeditselect').value, this.value)">
 <option value="true">On</option>
