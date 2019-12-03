@@ -217,3 +217,7 @@ table.aops tr:nth-child(2n) {
 .site-dropdown-wrapper{
     background-color: #222 !important;
 }
+/*Fix post sidebar with buttons being white*/
+.cmty-post-right{
+  background-color: black;
+}
