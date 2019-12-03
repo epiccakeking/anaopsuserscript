@@ -14,7 +14,6 @@ textarea, input,
 .cmty-post-preview,
 .cmty-index-card,
 .cmty-topic-mini-reply,
-.bbcode_quote,
 .online-section-outer,
 .cmty-hide-content,
 .cmty-category-cell-bottom,
@@ -29,7 +28,15 @@ html{
   border-color: darkgray !important;
   color: white;
 }
-
+.bbcode_quote::before{
+    /*https://artofproblemsolving.com/assets/images/quote.svg had a weird background so I had to fix it with this.*/
+    background: url('data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjEwLjUgOSAyMSAxOCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMwMDA7fS5jbHMtMntmaWxsOiNlZWU7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5BcnRib2FyZCAxPC90aXRsZT48Y2lyY2xlIGNsYXNzPSJjbHMtMSIgY3g9IjIxLjIzIiBjeT0iMTguMzQiIHI9IjEyLjMzIi8+PHBhdGggY2xhc3M9ImNscy0yIiBkPSJNMTkuNjEsMTIuNTN2MS45MWEzLjIsMy4yLDAsMCwwLTEuMTcsMS4wNyw0LjkxLDQuOTEsMCwwLDAtLjYxLDEuMzQsNS42NCw1LjY0LDAsMCwwLS4yMSwxLjU4aDJ2NC4xOEgxNS40NFYyMGExMC44NCwxMC44NCwwLDAsMSwuNDQtMy41Niw2Ljg4LDYuODgsMCwwLDEsMS4zNi0yLjI1QTYuNjIsNi42MiwwLDAsMSwxOS42MSwxMi41M1ptNi4xMywwdjEuOTFhMy4wOSwzLjA5LDAsMCwwLTEuMTYsMS4wNyw1LjU1LDUuNTUsMCwwLDAtLjYsMS4zNCw2LDYsMCwwLDAtLjIsMS41OGgydjQuMThIMjEuNTdWMjBBMTEuMTIsMTEuMTIsMCwwLDEsMjIsMTYuNDVhNi44OCw2Ljg4LDAsMCwxLDEuMzYtMi4yNUE2LjYyLDYuNjIsMCwwLDEsMjUuNzQsMTIuNTNaIi8+PC9zdmc+') !important;
+}
+.bbcode_quote,
+.bbcode_quote_head,
+.bbcode_quote::before,
+.bbcode_quote::after,
+.bbcode_quote_body::after,
 #top-bar,
 .aops-panel,
 .news-space,
@@ -219,5 +226,5 @@ table.aops tr:nth-child(2n) {
 }
 /*Fix post sidebar with buttons being white*/
 .cmty-post-right{
-  background-color: black;
+  background-color: black !important;
 }
