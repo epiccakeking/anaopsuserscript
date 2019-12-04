@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.4
+// @version      3.4.1
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -35,6 +35,8 @@
                 elmnttheme.type='text/css';
                 elmnttheme.media='all';
                 head.appendChild(elmnttheme);
+            }else{
+                head.appendChild(document.getElementById("theme"));
             }
             document.getElementById("theme").href='https://epiccakeking.github.io/anaopsuserscript/themes/'+theme+'.css';
         }
@@ -43,11 +45,15 @@
                 var elmntctheme=document.createElement('style');
                 elmntctheme.id="ctheme"
                 head.appendChild(elmntctheme);
+            }else{
+                head.appendChild(document.getElementById("ctheme"));
             }
             document.getElementById("ctheme").innerHTML=decodeURI(ctheme);
         }
     }
-    updateTheme()
+    try{
+        updateTheme()
+    }catch(e){}
     function updateToggles(){
         var styletogglesinner=""
         if (localStorage.getItem('expandannouncements')=="true"){
@@ -72,6 +78,7 @@
 
     document.onkeydown = KeyPress;
     document.addEventListener('DOMContentLoaded', function() {
+        updateTheme()
         updateToggles()
         if (localStorage.getItem('nobutton')!="true"){
             var commbtn=document.createElement('button');
