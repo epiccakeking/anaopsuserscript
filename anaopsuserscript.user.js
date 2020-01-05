@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.5.1
+// @version      3.6
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -12,14 +12,13 @@
 (function() {
     'use strict';
     // Your code here...
-    var ver="3.2";
+    var ver="3.6";
     var glog=[];
     if (localStorage.getItem("anaopsuserscriptversion")!=ver){
         alert(`An AoPS Userscript was updated.
 
 Changes:
-ver and purge are depreciated and will be removed in the future.
-Update popup has been added.`);
+ver and purge have been removed.`);
         localStorage.setItem("anaopsuserscriptversion",ver);
     }
     function log(x){
@@ -188,36 +187,9 @@ Update popup has been added.`);
                 localStorage.removeItem(cp[1]);
                 updateToggles()
                 break;
-            case "purge":
-                var purgenum=Number(cp[1]);
-                if (isNaN(purgenum)){
-                    alert("Not a number");
-                }else if (purgenum<1){
-                    alert('Invalid value for purge.');
-                }else{
-                    if (confirm("Confirm purge?")==true){
-                        for (let i = 0; i < purgenum; i++) {
-                            setTimeout(function(){
-                                var a = document.getElementsByClassName('cmty-post-delete');
-                                a[a.length-1].click();
-                                var b = document.getElementsByClassName("btn-primary")[0];
-                                b.click();
-                            }, i * 100);
-                        }
-                    }else{
-                        alert("Purge cancelled.");
-                    }
-                }
-                break;
             case "help":
                 var helppopup = document.createElement("iframe");
                 helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/";
-                helppopup.style = "width: 50vw; height: 50vh";
-                alert(helppopup);
-                break;
-            case "ver":
-                helppopup = document.createElement("iframe");
-                helppopup.src = "https://epiccakeking.github.io/anaopsuserscript/updatenotes/"+ver+".html";
                 helppopup.style = "width: 50vw; height: 50vh";
                 alert(helppopup);
                 break;
