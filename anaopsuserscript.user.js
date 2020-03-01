@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         An AoPS Userscript
 // @namespace    https://github.com/epiccakeking/anaopsuserscript
-// @version      3.6
+// @version      3.6.1
 // @description  try to take over the world!
 // @author       happycupcake/epiccakeking
 // @match        https://artofproblemsolving.com/*
@@ -12,13 +12,14 @@
 (function() {
     'use strict';
     // Your code here...
-    var ver="3.6";
+    var ver="3.6.1";
     var glog=[];
     if (localStorage.getItem("anaopsuserscriptversion")!=ver){
-        alert(`An AoPS Userscript was updated.
+        alert(`An AoPS Userscript was updated from `+(localStorage.getItem("anaopsuserscriptversion")||"N/A")+` to `+ver+`.
 
 Changes:
-ver and purge have been removed.`);
+3.6.1: Switched to event listner to improve compatibility.
+3.6: THe commands ver and purge have been removed.`);
         localStorage.setItem("anaopsuserscriptversion",ver);
     }
     function log(x){
@@ -78,12 +79,10 @@ ver and purge have been removed.`);
             document.getElementById("mystyletoggles").innerHTML=styletogglesinner;
         }
     }
-    function KeyPress(e) {
+    document.addEventListener("keydown", function(e){
         var evtobj = window.event? event : e
         if (evtobj.keyCode == 49 && evtobj.ctrlKey) commandprompter();
-    }
-
-    document.onkeydown = KeyPress;
+    }, false);
     document.addEventListener('DOMContentLoaded', function() {
         updateTheme()
         updateToggles()
