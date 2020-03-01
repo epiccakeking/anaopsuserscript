@@ -4,7 +4,7 @@ This script is an unofficial add on for artofproblemsolving.com and is not affil
 A userscript for artofproblemsolving.com<br>
 <a href="https://github.com/epiccakeking/anaopsuserscript/raw/master/anaopsuserscript.user.js">install userscript</a><br>
 <br>
-Click the CMND button or use CTRL+SHIFT+1 to open commands.<br>
+Click the CMND button or use Ctrl+1 (You can also use Ctrl+Shift+1 or any other combination of Ctrl and 1) to open commands.<br>
 <br>
 Commands:<br>
 val (value) (value of value): Set value in localStorage.<br>
