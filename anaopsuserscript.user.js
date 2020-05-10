@@ -11,22 +11,31 @@
 
 (function() {
     'use strict';
-    // Your code here...
-    var ver="3.6.1";
-    var glog=[];
+
+    //System for alerting the user of updates.
+    var ver="3.6.2";
     if (localStorage.getItem("anaopsuserscriptversion")!=ver){
         alert(`An AoPS Userscript was updated from `+(localStorage.getItem("anaopsuserscriptversion")||"N/A")+` to `+ver+`.
 
 Changes:
-3.6.1: Switched to event listner to improve compatibility.
-3.6: THe commands ver and purge have been removed.`);
+3.6.2:
+Minor formatting changes.
+Removed an easter egg.
+
+3.6.1:
+Switched to event listner to improve compatibility.
+
+3.6:
+Removed the commands ver and purge.`);
         localStorage.setItem("anaopsuserscriptversion",ver);
     }
+    //Set up debug logs
+    var glog=[];
     function log(x){
         glog.push(x)
         console.log(x)
     }
-    var temp=null //Might as well just declare it here.
+    var temp=null; //I'm a bad programmer ok?
     function cthemeupdate(){
         localStorage.setItem("ctheme",encodeURI(document.getElementById("cthemepopup").value));
         updateTheme();
@@ -193,11 +202,7 @@ Changes:
                 alert(helppopup);
                 break;
             case "user":
-                if (cp[1].toLowerCase()=="rick" && cp[2].toLowerCase()=="astley"){
-                    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ&feature=youtu.be&t=43";
-                }else{
-                    window.location.href = "https://artofproblemsolving.com/community/user/"+cp[1];
-                }
+                window.location.href = "https://artofproblemsolving.com/community/user/"+cp[1];
                 break;
             case "removetopic":
                 $($(".focus-topic")[$(".focus-topic").length-1]).trigger($.Event("click", { ctrlKey: true }));
